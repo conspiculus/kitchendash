@@ -12,7 +12,10 @@
   const LON = -105.9923;
   const TZ = 'America/Denver';
 
-  const WEBCAM_URL = 'https://coloradowebcam.net/webcam/salidatower3/current.jpg';
+  // Use the final URL the CDN serves. The legacy /webcam/salidatower3/current.jpg
+  // path 301-redirects and the redirect drops our ?t= cache-buster, which makes
+  // the browser keep showing the same cached image.
+  const WEBCAM_URL = 'https://current.coloradowebcam.net/salidatower3/Webcam-Snapshot-Salida-Colorado-Pan-Tilt-Zoom-Tour-From-Tenderfoot-Mtn.jpg';
   const WEBCAM_INTERVAL_MS = 4000;
   const WEBCAM_STALE_MS = 60_000;
 
