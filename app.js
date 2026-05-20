@@ -1,6 +1,6 @@
 /* Salida Weather Dashboard
-   Vanilla JS, no build, no deps. Designed to run on a Pi Zero 2 W for weeks.
-   - Webcam: refresh <img> src every WEBCAM_INTERVAL_MS, keep last-good on error.
+   Vanilla JS, no build, runs on a Pi Zero 2 W for weeks.
+   - Webcam: HLS live stream via hls.js (loaded lazily).
    - Weather: fetch Open-Meteo every WX_INTERVAL_MS, keep last-good on error.
    - Clock: minute tick for cam caption + day rollover.
 */
@@ -12,12 +12,11 @@
   const LON = -105.9923;
   const TZ = 'America/Denver';
 
-  // Use the final URL the CDN serves. The legacy /webcam/salidatower3/current.jpg
-  // path 301-redirects and the redirect drops our ?t= cache-buster, which makes
-  // the browser keep showing the same cached image.
-  const WEBCAM_URL = 'https://current.coloradowebcam.net/salidatower3/Webcam-Snapshot-Salida-Colorado-Pan-Tilt-Zoom-Tour-From-Tenderfoot-Mtn.jpg';
-  const WEBCAM_INTERVAL_MS = 4000;
-  const WEBCAM_STALE_MS = 60_000;
+  // Tenderfoot Mtn PTZ — live HLS stream that coloradowebcam.net wraps.
+  // Snapshot JPEGs were unreliable: the CDN strips cache-busters on redirect.
+  const HLS_URL = 'https://2-fss-2.streamhoster.com/pl_126/amlst:200612-1517992/playlist.m3u8';
+  const HLS_JS_URL = 'https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.light.min.js';
+  const WEBCAM_STALE_MS = 30_000;
 
   const WX_URL =
     'https://api.open-meteo.com/v1/forecast' +
@@ -125,25 +124,82 @@
     return d.toLocaleDateString('en-US', { weekday: 'short', timeZone: TZ });
   };
 
-  /* ── Webcam ──────────────────────────────────────────────────────── */
-  let lastGoodCamLoad = 0;
+  /* ── Webcam (HLS) ────────────────────────────────────────────────── */
+  let hls = null;
+  let lastVideoTime = 0;
+  let lastVideoTick = Date.now();
 
-  el.cam.addEventListener('load', () => {
-    lastGoodCamLoad = Date.now();
-    el.camStale.hidden = true;
-  });
-  el.cam.addEventListener('error', () => {
-    // Leave existing image visible. Stale indicator handled by tick.
+  el.cam.addEventListener('timeupdate', () => {
+    if (el.cam.currentTime !== lastVideoTime) {
+      lastVideoTime = el.cam.currentTime;
+      lastVideoTick = Date.now();
+      el.camStale.hidden = true;
+    }
   });
 
-  function refreshCam() {
-    // Cache-bust per the spec.
-    el.cam.src = `${WEBCAM_URL}?t=${Date.now()}`;
+  function loadHlsScript() {
+    return new Promise((resolve, reject) => {
+      if (window.Hls) return resolve();
+      const s = document.createElement('script');
+      s.src = HLS_JS_URL;
+      s.onload = () => resolve();
+      s.onerror = () => reject(new Error('hls.js load failed'));
+      document.head.appendChild(s);
+    });
+  }
+
+  async function startCam() {
+    // Safari / iOS plays HLS natively.
+    if (el.cam.canPlayType('application/vnd.apple.mpegurl')) {
+      el.cam.src = HLS_URL;
+      el.cam.play().catch(() => {});
+      return;
+    }
+    try {
+      await loadHlsScript();
+    } catch (err) {
+      console.warn(err);
+      el.camStale.hidden = false;
+      // Retry the script load in a minute.
+      setTimeout(startCam, 60_000);
+      return;
+    }
+    if (!window.Hls || !window.Hls.isSupported()) {
+      console.warn('HLS not supported in this browser');
+      el.camStale.hidden = false;
+      return;
+    }
+    attachHls();
+  }
+
+  function attachHls() {
+    if (hls) { try { hls.destroy(); } catch (_) {} hls = null; }
+    hls = new window.Hls({
+      liveSyncDuration: 4,
+      liveMaxLatencyDuration: 10,
+      manifestLoadingTimeOut: 15_000,
+    });
+    hls.loadSource(HLS_URL);
+    hls.attachMedia(el.cam);
+    hls.on(window.Hls.Events.MANIFEST_PARSED, () => {
+      el.cam.play().catch(() => {});
+    });
+    hls.on(window.Hls.Events.ERROR, (_, data) => {
+      if (!data.fatal) return;
+      const T = window.Hls.ErrorTypes;
+      if (data.type === T.NETWORK_ERROR) {
+        try { hls.startLoad(); } catch (_) { setTimeout(attachHls, 5000); }
+      } else if (data.type === T.MEDIA_ERROR) {
+        try { hls.recoverMediaError(); } catch (_) { setTimeout(attachHls, 5000); }
+      } else {
+        setTimeout(attachHls, 5000);
+      }
+    });
   }
 
   function camTick() {
     el.camTime.textContent = nowClock();
-    if (lastGoodCamLoad && (Date.now() - lastGoodCamLoad) > WEBCAM_STALE_MS) {
+    if (Date.now() - lastVideoTick > WEBCAM_STALE_MS) {
       el.camStale.hidden = false;
     }
   }
@@ -243,16 +299,17 @@
   }
 
   /* ── Boot ────────────────────────────────────────────────────────── */
-  refreshCam();
+  startCam();
   camTick();
   fetchWeather();
 
-  setInterval(refreshCam, WEBCAM_INTERVAL_MS);
-  setInterval(camTick, 30_000);
+  setInterval(camTick, 5_000);
   setInterval(fetchWeather, WX_INTERVAL_MS);
 
-  // Re-fetch weather when the tab regains focus (helps after sleep/wifi blip).
   document.addEventListener('visibilitychange', () => {
-    if (!document.hidden) fetchWeather();
+    if (document.hidden) return;
+    fetchWeather();
+    // After a long sleep the stream often won't resume on its own.
+    if (el.cam.paused) el.cam.play().catch(() => {});
   });
 })();

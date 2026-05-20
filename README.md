@@ -34,9 +34,12 @@ Point the Pi's Chromium at that URL in kiosk mode.
 
 ## Tuning knobs (in `app.js`)
 
-- `WEBCAM_INTERVAL_MS` (default 4000) — back off if the source rate-limits
+- `HLS_URL` — Tenderfoot Mtn live stream (m3u8 served by streamhoster.com)
 - `WX_INTERVAL_MS` (default 15 min) — Open-Meteo free tier is generous
-- `WEBCAM_STALE_MS` (default 60s) — when to show the "signal lost" badge
+- `WEBCAM_STALE_MS` (default 30s) — when to show the "signal lost" badge
+
+The webcam is a live HLS stream played into a `<video>` element. `hls.js`
+(light build) is loaded lazily from jsdelivr. Safari/iOS use native HLS.
 
 ## Notes
 
