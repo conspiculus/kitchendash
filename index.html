@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light">
+  <title>Salida Weather</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="grid">
+
+    <section class="panel current" aria-label="Current conditions">
+      <header class="loc">SALIDA, CO &middot; 7,083 FT</header>
+
+      <div class="now">
+        <div class="now-left">
+          <div class="temp" id="temp">--&deg;</div>
+          <div class="now-meta">
+            <div class="cond" id="cond">&mdash;</div>
+            <div class="feels">Feels like <span id="feels">--&deg;</span></div>
+            <div class="hilo">
+              <span class="hi">H <span id="hi">--&deg;</span></span>
+              <span class="sep">&middot;</span>
+              <span class="lo">L <span id="lo">--&deg;</span></span>
+            </div>
+          </div>
+        </div>
+        <div class="now-icon" id="now-icon" aria-hidden="true"></div>
+      </div>
+
+      <dl class="metrics">
+        <div class="m"><dt>Wind</dt><dd id="wind">&mdash;</dd></div>
+        <div class="m"><dt>Humidity</dt><dd id="humidity">&mdash;</dd></div>
+        <div class="m"><dt>UV Index</dt><dd id="uv">&mdash;</dd></div>
+        <div class="m"><dt>Dew Point</dt><dd id="dew">&mdash;</dd></div>
+        <div class="m"><dt>Pressure</dt><dd id="pressure">&mdash;</dd></div>
+        <div class="m"><dt>Cloud Cover</dt><dd id="cloud">&mdash;</dd></div>
+        <div class="m"><dt>Gusts</dt><dd id="gusts">&mdash;</dd></div>
+        <div class="m"><dt>Sunrise</dt><dd id="sunrise">&mdash;</dd></div>
+        <div class="m"><dt>Sunset</dt><dd id="sunset">&mdash;</dd></div>
+      </dl>
+
+      <footer class="stamp" id="wx-stamp">&mdash;</footer>
+    </section>
+
+    <section class="panel cam" aria-label="Tenderfoot Mountain webcam">
+      <img id="cam" alt="" referrerpolicy="no-referrer">
+      <div class="cam-badge"><span class="dot"></span>LIVE</div>
+      <div class="cam-caption">Tenderfoot Mtn PTZ &middot; <span id="cam-time">--:--</span></div>
+      <div class="cam-stale" id="cam-stale" hidden>signal lost</div>
+    </section>
+
+    <section class="panel forecast" aria-label="10-day forecast">
+      <div class="days" id="days"></div>
+    </section>
+
+  </main>
+  <script src="app.js" defer></script>
+</body>
+</html>

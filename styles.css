@@ -1,0 +1,296 @@
+:root {
+  --bg: #fafaf7;
+  --panel: #ffffff;
+  --ink: #222;
+  --ink-2: #333;
+  --mute: #666;
+  --mute-2: #888;
+  --line: #e6e4dd;
+  --hi: #c44;
+  --lo: #4a78a0;
+  --accent: #c44;
+  --pad: 18px;
+  --radius: 6px;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html, body {
+  height: 100%;
+  width: 100%;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+  font-weight: 400;
+  font-size: 14px;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+.grid {
+  display: grid;
+  height: 100vh;
+  width: 100vw;
+  padding: 10px;
+  gap: 10px;
+  grid-template-columns: 17fr 15fr;
+  grid-template-rows: 60fr 40fr;
+  grid-template-areas:
+    "current cam"
+    "forecast forecast";
+}
+
+.panel {
+  background: var(--panel);
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  overflow: hidden;
+  position: relative;
+}
+
+/* ── Current conditions ─────────────────────────── */
+.current {
+  grid-area: current;
+  padding: var(--pad);
+  display: flex;
+  flex-direction: column;
+}
+
+.loc {
+  font-size: 11px;
+  letter-spacing: 0.18em;
+  color: var(--mute);
+  font-weight: 600;
+}
+
+.now {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 14px;
+}
+
+.now-left { display: flex; flex-direction: column; gap: 4px; }
+
+.temp {
+  font-size: 64px;
+  font-weight: 300;
+  line-height: 1;
+  letter-spacing: -2px;
+  color: var(--ink);
+}
+
+.now-meta {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  margin-top: 6px;
+}
+
+.cond {
+  font-size: 17px;
+  color: var(--ink-2);
+}
+
+.feels {
+  font-size: 13px;
+  color: var(--mute);
+}
+
+.hilo {
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.hi { color: var(--hi); font-weight: 500; }
+.lo { color: var(--lo); font-weight: 500; }
+.hilo .sep { color: var(--mute-2); margin: 0 6px; }
+
+.now-icon {
+  width: 88px;
+  height: 88px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--ink-2);
+}
+
+.now-icon svg {
+  width: 100%;
+  height: 100%;
+  stroke-width: 1.4;
+}
+
+.metrics {
+  margin-top: auto;
+  padding-top: 16px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 12px 18px;
+  border-top: 1px solid var(--line);
+}
+
+.m { display: flex; flex-direction: column; gap: 2px; min-width: 0; }
+
+.m dt {
+  font-size: 10px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--mute-2);
+  font-weight: 600;
+}
+
+.m dd {
+  font-size: 15px;
+  color: var(--ink-2);
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.stamp {
+  margin-top: 10px;
+  font-size: 10px;
+  color: var(--mute-2);
+  letter-spacing: 0.06em;
+}
+
+/* ── Webcam ──────────────────────────────────── */
+.cam {
+  grid-area: cam;
+  background: #111;
+}
+
+.cam img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  background: #111;
+}
+
+.cam-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background: rgba(0,0,0,0.55);
+  color: #fff;
+  padding: 4px 8px 4px 6px;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.18em;
+  border-radius: 3px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.cam-badge .dot {
+  width: 7px;
+  height: 7px;
+  background: #e34;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.cam-caption {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  color: #fff;
+  font-size: 11px;
+  letter-spacing: 0.06em;
+  background: rgba(0,0,0,0.45);
+  padding: 3px 8px;
+  border-radius: 3px;
+  font-variant-numeric: tabular-nums;
+}
+
+.cam-stale {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: rgba(220,80,40,0.85);
+  color: #fff;
+  font-size: 10px;
+  letter-spacing: 0.16em;
+  padding: 3px 7px;
+  border-radius: 3px;
+  text-transform: uppercase;
+}
+
+/* ── 10-day forecast ───────────────────────────── */
+.forecast {
+  grid-area: forecast;
+  padding: 10px 12px;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  height: 100%;
+}
+
+.day {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 6px 4px;
+  border-right: 1px solid var(--line);
+  text-align: center;
+  min-width: 0;
+}
+
+.day:last-child { border-right: none; }
+
+.day .dname {
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  color: var(--mute);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+.day.today .dname {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+.day .dicon {
+  width: 36px;
+  height: 36px;
+  color: var(--ink-2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.day .dicon svg {
+  width: 100%;
+  height: 100%;
+  stroke-width: 1.5;
+}
+
+.day .dtemps {
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+}
+
+.day .dtemps .dhi { color: var(--hi); font-weight: 600; }
+.day .dtemps .dlo { color: var(--lo); }
+.day .dtemps .dsep { color: var(--mute-2); margin: 0 4px; }
+
+.day .dpop {
+  font-size: 11px;
+  color: var(--lo);
+  font-variant-numeric: tabular-nums;
+  min-height: 13px;
+}
+
+/* Hide pop label when empty, but reserve space */
+.day .dpop:empty::before { content: " "; }
