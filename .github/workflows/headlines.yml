@@ -12,43 +12,42 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Install curl-impersonate
+        run: |
+          # Plain curl gets 429'd by Cloudflare regardless of headers because
+          # CF fingerprints the TLS handshake (JA3). curl-impersonate mimics
+          # Chrome's full TLS/HTTP-2 fingerprint and slips through.
+          set -e
+          mkdir -p .ci
+          curl -fsSL -o .ci/ci.tar.gz \
+            https://github.com/lwthiker/curl-impersonate/releases/download/v0.6.1/curl-impersonate-v0.6.1.x86_64-linux-gnu.tar.gz
+          mkdir -p .ci/ci
+          tar -xzf .ci/ci.tar.gz -C .ci/ci
+          ls .ci/ci
+
       - name: Fetch RSS
         run: |
-          # BLOX sits behind Cloudflare and 429s requests from GH runner IPs
-          # unless the request fingerprint looks like a real Chrome browser.
-          # Send the full set of client hints / sec-fetch headers Cloudflare
-          # checks, plus a referer warm-up to the search page.
-          UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          set -e
           URL="https://www.themountainmail.com/search/?q=&t=article&l=20&s=start_time&sd=desc&f=rss"
 
-          curl --fail --max-time 30 \
-               --retry 5 --retry-delay 10 --retry-all-errors \
-               --http1.1 --compressed \
-               -A "$UA" \
-               -H "Accept: application/rss+xml, application/xml;q=0.9, text/xml;q=0.8, */*;q=0.7" \
-               -H "Accept-Language: en-US,en;q=0.9" \
-               -H "Accept-Encoding: gzip, deflate, br" \
-               -H "Cache-Control: no-cache" \
-               -H "Pragma: no-cache" \
-               -H "Upgrade-Insecure-Requests: 1" \
-               -H "Sec-Ch-Ua: \"Chromium\";v=\"124\", \"Google Chrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"" \
-               -H "Sec-Ch-Ua-Mobile: ?0" \
-               -H "Sec-Ch-Ua-Platform: \"Linux\"" \
-               -H "Sec-Fetch-Dest: document" \
-               -H "Sec-Fetch-Mode: navigate" \
-               -H "Sec-Fetch-Site: none" \
-               -H "Sec-Fetch-User: ?1" \
-               -H "Referer: https://www.themountainmail.com/" \
-               "$URL" \
-               -o headlines.xml
+          # The chrome wrapper sets all of curl-impersonate's TLS/H2 flags.
+          # We still send a realistic Referer; the wrapper handles the rest.
+          .ci/ci/curl_chrome116 --fail --max-time 30 \
+            --retry 4 --retry-delay 10 --retry-all-errors \
+            -H "Referer: https://www.themountainmail.com/" \
+            -H "Accept: application/rss+xml, application/xml;q=0.9, */*;q=0.8" \
+            "$URL" \
+            -o headlines.xml
 
-          # Sanity check: the response must look like XML, not an HTML
-          # bot-challenge page. Fail the job (don't commit garbage) if not.
-          echo "--- first bytes ---"
-          head -c 400 headlines.xml; echo
           echo "--- size ---"
           wc -c headlines.xml
+          echo "--- first 400 bytes ---"
+          head -c 400 headlines.xml; echo
           grep -q '<rss\|<?xml' headlines.xml
+
+      - name: Clean up downloader
+        if: always()
+        run: rm -rf .ci
       - name: Commit if changed
         run: |
           git config user.name  "github-actions[bot]"
