@@ -33,7 +33,7 @@
     '&current=temperature_2m,relative_humidity_2m,apparent_temperature,weather_code,cloud_cover,' +
     'pressure_msl,wind_speed_10m,wind_direction_10m,wind_gusts_10m,uv_index,dew_point_2m,is_day' +
     '&daily=weather_code,temperature_2m_max,temperature_2m_min,sunrise,sunset,uv_index_max,' +
-    'precipitation_probability_max' +
+    'precipitation_probability_max,wind_speed_10m_max' +
     '&temperature_unit=fahrenheit&wind_speed_unit=mph&precipitation_unit=inch' +
     `&timezone=${encodeURIComponent(TZ)}&forecast_days=10`;
   const WX_INTERVAL_MS = 15 * 60 * 1000;
@@ -338,6 +338,14 @@
       pop.className = 'dpop';
       const p = d.precipitation_probability_max ? d.precipitation_probability_max[i] : null;
       pop.textContent = (p != null && p >= 10) ? `${Math.round(p)}%` : '';
+      // 25 kt ≈ 28.77 mph.
+      const w = d.wind_speed_10m_max ? d.wind_speed_10m_max[i] : null;
+      if (w != null && w > 28.77) {
+        const wind = document.createElement('span');
+        wind.className = 'dwind';
+        wind.textContent = 'W';
+        pop.appendChild(wind);
+      }
       day.appendChild(pop);
 
       frag.appendChild(day);

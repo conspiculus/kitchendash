@@ -299,6 +299,12 @@ html, body {
 /* Hide pop label when empty, but reserve space */
 .day .dpop:empty::before { content: " "; }
 
+.day .dwind {
+  color: var(--hi);
+  font-weight: 700;
+  margin-left: 6px;
+}
+
 /* ── News ticker (bottom strip) ──────────────────── */
 .news-ticker {
   position: fixed;
