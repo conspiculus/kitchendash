@@ -14,21 +14,41 @@ jobs:
       - uses: actions/checkout@v4
       - name: Fetch RSS
         run: |
-          # Mountain Mail / BLOX rate-limits aggressively and 429s plain
-          # curl UAs from cloud IPs. Pose as a real browser, retry on 429,
-          # and back off — works in practice.
+          # BLOX sits behind Cloudflare and 429s requests from GH runner IPs
+          # unless the request fingerprint looks like a real Chrome browser.
+          # Send the full set of client hints / sec-fetch headers Cloudflare
+          # checks, plus a referer warm-up to the search page.
+          UA="Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36"
+          URL="https://www.themountainmail.com/search/?q=&t=article&l=20&s=start_time&sd=desc&f=rss"
+
           curl --fail --max-time 30 \
-               --retry 5 --retry-delay 8 --retry-all-errors \
-               -A "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/124.0.0.0 Safari/537.36" \
-               -H "Accept: application/rss+xml, application/xml;q=0.9, */*;q=0.8" \
+               --retry 5 --retry-delay 10 --retry-all-errors \
+               --http1.1 --compressed \
+               -A "$UA" \
+               -H "Accept: application/rss+xml, application/xml;q=0.9, text/xml;q=0.8, */*;q=0.7" \
                -H "Accept-Language: en-US,en;q=0.9" \
+               -H "Accept-Encoding: gzip, deflate, br" \
+               -H "Cache-Control: no-cache" \
+               -H "Pragma: no-cache" \
+               -H "Upgrade-Insecure-Requests: 1" \
+               -H "Sec-Ch-Ua: \"Chromium\";v=\"124\", \"Google Chrome\";v=\"124\", \"Not-A.Brand\";v=\"99\"" \
+               -H "Sec-Ch-Ua-Mobile: ?0" \
+               -H "Sec-Ch-Ua-Platform: \"Linux\"" \
+               -H "Sec-Fetch-Dest: document" \
+               -H "Sec-Fetch-Mode: navigate" \
+               -H "Sec-Fetch-Site: none" \
+               -H "Sec-Fetch-User: ?1" \
                -H "Referer: https://www.themountainmail.com/" \
-               "https://www.themountainmail.com/search/?q=&t=article&l=20&s=start_time&sd=desc&f=rss" \
+               "$URL" \
                -o headlines.xml
+
           # Sanity check: the response must look like XML, not an HTML
           # bot-challenge page. Fail the job (don't commit garbage) if not.
-          head -c 200 headlines.xml
-          grep -q '<rss\|<\?xml' headlines.xml
+          echo "--- first bytes ---"
+          head -c 400 headlines.xml; echo
+          echo "--- size ---"
+          wc -c headlines.xml
+          grep -q '<rss\|<?xml' headlines.xml
       - name: Commit if changed
         run: |
           git config user.name  "github-actions[bot]"
