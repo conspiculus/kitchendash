@@ -113,10 +113,20 @@
     return dirs[Math.round(((deg % 360) / 22.5)) % 16];
   };
   const fmtClock = (iso) => {
+    // Open-Meteo returns sunrise/sunset as "YYYY-MM-DDTHH:MM" in the
+    // requested timezone, with no offset suffix. new Date() then parses
+    // them against the *system* timezone, which is UTC on the Pi but
+    // Mountain on the laptop — so the displayed time silently shifts.
+    // Pull the hours/minutes straight out of the string instead.
     if (!iso) return '—';
-    const d = new Date(iso);
-    return d.toLocaleTimeString('en-US',
-      { hour: 'numeric', minute: '2-digit', timeZone: TZ });
+    const m = /T(\d{2}):(\d{2})/.exec(iso);
+    if (!m) return '—';
+    let h = parseInt(m[1], 10);
+    const mm = m[2];
+    const ampm = h >= 12 ? 'PM' : 'AM';
+    h = h % 12;
+    if (h === 0) h = 12;
+    return `${h}:${mm} ${ampm}`;
   };
   const nowClock = () =>
     new Date().toLocaleTimeString('en-US',
