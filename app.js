@@ -30,6 +30,9 @@
   const WX_INTERVAL_MS = 15 * 60 * 1000;
   const WX_RETRY_MS = 60 * 1000;
 
+  const RSS_PATH = 'headlines.xml';
+  const RSS_INTERVAL_MS = 15 * 60 * 1000;
+
   /* ── Icons (inline SVGs, monoline). Re-used as strings. ───────────── */
   const ICON = {
     sun: `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 3v2M12 19v2M3 12h2M19 12h2M5.6 5.6l1.4 1.4M17 17l1.4 1.4M5.6 18.4 7 17M17 7l1.4-1.4"/></svg>`,
@@ -298,17 +301,51 @@
     el.days.replaceChildren(frag);
   }
 
+  /* ── News ticker ─────────────────────────────────────────────────── */
+  const escapeHtml = (s) => s.replace(/[&<>"']/g, (c) => ({
+    '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
+  }[c]));
+
+  async function loadHeadlines() {
+    try {
+      const res = await fetch(`${RSS_PATH}?t=${Date.now()}`, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const xml = await res.text();
+      const doc = new DOMParser().parseFromString(xml, 'text/xml');
+      const items = [...doc.querySelectorAll('item')]
+        .map((it) => (it.querySelector('title')?.textContent || '').trim())
+        .filter(Boolean);
+      if (items.length) renderTicker(items);
+    } catch (err) {
+      // Leave previous ticker content in place.
+      console.warn('headlines fetch failed', err);
+    }
+  }
+
+  function renderTicker(titles) {
+    const track = document.getElementById('ticker-track');
+    if (!track) return;
+    const html = titles
+      .map((t) => `<span class="news-ticker-item">${escapeHtml(t)}</span>`)
+      .join('');
+    // Duplicate so the -50% loop is seamless.
+    track.innerHTML = html + html;
+  }
+
   /* ── Boot ────────────────────────────────────────────────────────── */
   startCam();
   camTick();
   fetchWeather();
+  loadHeadlines();
 
   setInterval(camTick, 5_000);
   setInterval(fetchWeather, WX_INTERVAL_MS);
+  setInterval(loadHeadlines, RSS_INTERVAL_MS);
 
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) return;
     fetchWeather();
+    loadHeadlines();
     // After a long sleep the stream often won't resume on its own.
     if (el.cam.paused) el.cam.play().catch(() => {});
   });

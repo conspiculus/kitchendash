@@ -29,7 +29,7 @@ html, body {
 
 .grid {
   display: grid;
-  height: 100vh;
+  height: calc(100vh - 36px);
   width: 100vw;
   padding: 10px;
   gap: 10px;
@@ -298,3 +298,47 @@ html, body {
 
 /* Hide pop label when empty, but reserve space */
 .day .dpop:empty::before { content: " "; }
+
+/* ── News ticker (bottom strip) ──────────────────── */
+.news-ticker {
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 36px;
+  background: #111;
+  color: #eee;
+  border-top: 1px solid #333;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  font-size: 16px;
+  z-index: 1000;
+}
+
+.news-ticker-track {
+  display: inline-flex;
+  flex-shrink: 0;
+  white-space: nowrap;
+  animation: ticker-scroll 180s linear infinite;
+  will-change: transform; /* essential on Pi — composites the strip onto its own layer */
+}
+
+.news-ticker-item {
+  padding: 0 32px;
+  display: inline-flex;
+  align-items: center;
+}
+
+.news-ticker-item::before {
+  content: "•";
+  margin-right: 14px;
+  color: #ff8c00;
+  font-size: 18px;
+  line-height: 1;
+}
+
+@keyframes ticker-scroll {
+  from { transform: translateX(0); }
+  to   { transform: translateX(-50%); }
+}
