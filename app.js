@@ -17,6 +17,15 @@
   const HLS_URL = 'https://2-fss-2.streamhoster.com/pl_126/amlst:200612-1517992/playlist.m3u8';
   const HLS_JS_URL = 'https://cdn.jsdelivr.net/npm/hls.js@1/dist/hls.light.min.js';
   const WEBCAM_STALE_MS = 30_000;
+  // Watchdog: hls.js' own retry handles fatal errors, but the stream often
+  // stops advancing without a fatal event (buffer stalls, silent <video>
+  // pauses, dead session tokens). Escalate from a cheap play() nudge to a
+  // full re-attach if currentTime hasn't moved in a while.
+  const WEBCAM_SOFT_RECOVERY_MS = 20_000;
+  const WEBCAM_HARD_RECOVERY_MS = 45_000;
+  // Belt-and-suspenders: Streamhoster session tokens in the manifest URL
+  // expire eventually. Refresh the pipeline every 6h even if it looks fine.
+  const WEBCAM_PERIODIC_REATTACH_MS = 6 * 60 * 60 * 1000;
 
   const WX_URL =
     'https://api.open-meteo.com/v1/forecast' +
@@ -141,6 +150,8 @@
   let hls = null;
   let lastVideoTime = 0;
   let lastVideoTick = Date.now();
+  let lastSoftRecovery = 0;
+  let lastHardRecovery = 0;
 
   el.cam.addEventListener('timeupdate', () => {
     if (el.cam.currentTime !== lastVideoTime) {
@@ -187,10 +198,18 @@
 
   function attachHls() {
     if (hls) { try { hls.destroy(); } catch (_) {} hls = null; }
+    // Give the new attach grace before the watchdog can fire on it.
+    lastVideoTick = Date.now();
     hls = new window.Hls({
-      liveSyncDuration: 4,
-      liveMaxLatencyDuration: 10,
+      // Easier on the Pi Zero 2 W over 2.4GHz — let it sit a bit further
+      // from the live edge instead of thrashing to catch up.
+      liveSyncDuration: 6,
+      liveMaxLatencyDuration: 15,
       manifestLoadingTimeOut: 15_000,
+      // hls.js defaults grow the MSE buffer to ~600s. Cap it on 512MB RAM.
+      maxBufferLength: 15,
+      maxMaxBufferLength: 30,
+      maxBufferSize: 30 * 1000 * 1000,
     });
     hls.loadSource(HLS_URL);
     hls.attachMedia(el.cam);
@@ -212,8 +231,23 @@
 
   function camTick() {
     el.camTime.textContent = nowClock();
-    if (Date.now() - lastVideoTick > WEBCAM_STALE_MS) {
-      el.camStale.hidden = false;
+    const stale = Date.now() - lastVideoTick;
+    if (stale < WEBCAM_STALE_MS) {
+      el.camStale.hidden = true;
+      return;
+    }
+    el.camStale.hidden = false;
+    const now = Date.now();
+    if (stale > WEBCAM_HARD_RECOVERY_MS &&
+        now - lastHardRecovery > WEBCAM_HARD_RECOVERY_MS) {
+      lastHardRecovery = now;
+      console.warn(`webcam stalled ${stale}ms — full re-attach`);
+      attachHls();
+    } else if (stale > WEBCAM_SOFT_RECOVERY_MS &&
+               now - lastSoftRecovery > WEBCAM_SOFT_RECOVERY_MS) {
+      lastSoftRecovery = now;
+      console.warn(`webcam stalled ${stale}ms — trying play()`);
+      el.cam.play().catch(() => {});
     }
   }
 
@@ -351,6 +385,12 @@
   setInterval(camTick, 5_000);
   setInterval(fetchWeather, WX_INTERVAL_MS);
   setInterval(loadHeadlines, RSS_INTERVAL_MS);
+  setInterval(() => {
+    if (hls) {
+      console.log('webcam: periodic re-attach (refresh session token)');
+      attachHls();
+    }
+  }, WEBCAM_PERIODIC_REATTACH_MS);
 
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) return;
