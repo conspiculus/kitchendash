@@ -19,13 +19,16 @@
   const WEBCAM_STALE_MS = 30_000;
   // Watchdog: hls.js' own retry handles fatal errors, but the stream often
   // stops advancing without a fatal event (buffer stalls, silent <video>
-  // pauses, dead session tokens). Escalate from a cheap play() nudge to a
-  // full re-attach if currentTime hasn't moved in a while.
+  // pauses, dead session tokens). Escalate: play() → full re-attach →
+  // page reload. The final tier exists because on the Pi, Chromium's MSE
+  // and decoder state can survive hls.destroy() + new Hls() cycles; only
+  // a fresh document fully clears it.
   const WEBCAM_SOFT_RECOVERY_MS = 20_000;
   const WEBCAM_HARD_RECOVERY_MS = 45_000;
+  const WEBCAM_RELOAD_MS = 120_000;
   // Belt-and-suspenders: Streamhoster session tokens in the manifest URL
-  // expire eventually. Refresh the pipeline every 6h even if it looks fine.
-  const WEBCAM_PERIODIC_REATTACH_MS = 6 * 60 * 60 * 1000;
+  // expire eventually. Refresh the pipeline every 3h even if it looks fine.
+  const WEBCAM_PERIODIC_REATTACH_MS = 3 * 60 * 60 * 1000;
 
   const WX_URL =
     'https://api.open-meteo.com/v1/forecast' +
@@ -198,6 +201,15 @@
 
   function attachHls() {
     if (hls) { try { hls.destroy(); } catch (_) {} hls = null; }
+    // Fully reset the <video> element. On the Pi, Chromium's MSE and
+    // H.264 decoder state can survive hls.destroy()/new Hls() and keep
+    // the pipeline wedged on a frozen frame. pause + remove src + load()
+    // forces the element to tear down the MediaSource and rebuild.
+    try {
+      el.cam.pause();
+      el.cam.removeAttribute('src');
+      el.cam.load();
+    } catch (_) {}
     // Give the new attach grace before the watchdog can fire on it.
     lastVideoTick = Date.now();
     hls = new window.Hls({
@@ -238,6 +250,13 @@
     }
     el.camStale.hidden = false;
     const now = Date.now();
+    if (stale > WEBCAM_RELOAD_MS) {
+      // Hard re-attach didn't unstick the pipeline. A full page reload
+      // always recovers (verified on the Pi); accept the cost.
+      console.warn(`webcam stalled ${stale}ms — reloading page`);
+      location.reload();
+      return;
+    }
     if (stale > WEBCAM_HARD_RECOVERY_MS &&
         now - lastHardRecovery > WEBCAM_HARD_RECOVERY_MS) {
       lastHardRecovery = now;
