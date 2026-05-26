@@ -26,9 +26,12 @@
   const WEBCAM_SOFT_RECOVERY_MS = 20_000;
   const WEBCAM_HARD_RECOVERY_MS = 45_000;
   const WEBCAM_RELOAD_MS = 120_000;
-  // Belt-and-suspenders: Streamhoster session tokens in the manifest URL
-  // expire eventually. Refresh the pipeline every 3h even if it looks fine.
-  const WEBCAM_PERIODIC_REATTACH_MS = 3 * 60 * 60 * 1000;
+  // Cap reload attempts so a persistently-broken stream can't drive an
+  // infinite reload loop. Count is held in sessionStorage so it survives
+  // the reload; it's cleared after the stream has run cleanly for a while.
+  const WEBCAM_MAX_RELOADS = 3;
+  const WEBCAM_RELOAD_GRACE_MS = 60_000;
+  const WEBCAM_RELOAD_COUNT_KEY = 'webcamReloadCount';
 
   const WX_URL =
     'https://api.open-meteo.com/v1/forecast' +
@@ -43,7 +46,13 @@
   const WX_RETRY_MS = 60 * 1000;
 
   const RSS_PATH = 'headlines.xml';
-  const RSS_INTERVAL_MS = 15 * 60 * 1000;
+  // headlines.xml is regenerated every 3h by the GH Action; refetching the
+  // mirror more often than the source updates is wasted work.
+  const RSS_INTERVAL_MS = 6 * 60 * 60 * 1000;
+  // Pause the ticker scroll overnight to ease CPU load on the Pi.
+  const TICKER_NIGHT_START_H = 23;  // 11pm Mountain
+  const TICKER_NIGHT_END_H   = 5;   // 5am Mountain
+  const TICKER_NIGHT_CHECK_MS = 60 * 1000;
 
   /* ── Icons (inline SVGs, monoline). Re-used as strings. ───────────── */
   const ICON = {
@@ -155,12 +164,20 @@
   let lastVideoTick = Date.now();
   let lastSoftRecovery = 0;
   let lastHardRecovery = 0;
+  const pageLoadTime = Date.now();
+  let reloadCountCleared = false;
 
   el.cam.addEventListener('timeupdate', () => {
     if (el.cam.currentTime !== lastVideoTime) {
       lastVideoTime = el.cam.currentTime;
       lastVideoTick = Date.now();
       el.camStale.hidden = true;
+      // Once the stream has been advancing past the grace window, treat
+      // the page as healthy and reset the reload counter for next time.
+      if (!reloadCountCleared && Date.now() - pageLoadTime > WEBCAM_RELOAD_GRACE_MS) {
+        try { sessionStorage.removeItem(WEBCAM_RELOAD_COUNT_KEY); } catch (_) {}
+        reloadCountCleared = true;
+      }
     }
   });
 
@@ -212,6 +229,8 @@
     } catch (_) {}
     // Give the new attach grace before the watchdog can fire on it.
     lastVideoTick = Date.now();
+    lastSoftRecovery = 0;
+    lastHardRecovery = 0;
     hls = new window.Hls({
       // Easier on the Pi Zero 2 W over 2.4GHz — let it sit a bit further
       // from the live edge instead of thrashing to catch up.
@@ -252,10 +271,20 @@
     const now = Date.now();
     if (stale > WEBCAM_RELOAD_MS) {
       // Hard re-attach didn't unstick the pipeline. A full page reload
-      // always recovers (verified on the Pi); accept the cost.
-      console.warn(`webcam stalled ${stale}ms — reloading page`);
-      location.reload();
-      return;
+      // always recovers (verified on the Pi); accept the cost — but cap
+      // attempts so a persistently-broken stream can't loop forever.
+      let count = 0;
+      try {
+        count = parseInt(sessionStorage.getItem(WEBCAM_RELOAD_COUNT_KEY) || '0', 10) || 0;
+      } catch (_) {}
+      if (count < WEBCAM_MAX_RELOADS) {
+        try { sessionStorage.setItem(WEBCAM_RELOAD_COUNT_KEY, String(count + 1)); } catch (_) {}
+        console.warn(`webcam stalled ${stale}ms — reloading (attempt ${count + 1}/${WEBCAM_MAX_RELOADS})`);
+        location.reload();
+        return;
+      }
+      console.warn(`webcam stalled ${stale}ms — reload cap (${count}) hit, falling back to re-attach`);
+      // Fall through to hard re-attach.
     }
     if (stale > WEBCAM_HARD_RECOVERY_MS &&
         now - lastHardRecovery > WEBCAM_HARD_RECOVERY_MS) {
@@ -377,6 +406,8 @@
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
   }[c]));
 
+  let lastTickerKey = '';
+
   async function loadHeadlines() {
     try {
       const res = await fetch(`${RSS_PATH}?t=${Date.now()}`, { cache: 'no-store' });
@@ -386,11 +417,27 @@
       const items = [...doc.querySelectorAll('item')]
         .map((it) => (it.querySelector('title')?.textContent || '').trim())
         .filter(Boolean);
-      if (items.length) renderTicker(items);
+      if (!items.length) return;
+      const key = items.join('|');
+      if (key === lastTickerKey) return;
+      lastTickerKey = key;
+      renderTicker(items);
     } catch (err) {
       // Leave previous ticker content in place.
       console.warn('headlines fetch failed', err);
     }
+  }
+
+  function tickerNightTick() {
+    const track = document.getElementById('ticker-track');
+    if (!track) return;
+    // Pull the hour in Mountain time regardless of the Pi's system TZ.
+    const parts = new Intl.DateTimeFormat('en-US', {
+      hour: 'numeric', hour12: false, timeZone: TZ,
+    }).formatToParts(new Date());
+    const hour = parseInt(parts.find((p) => p.type === 'hour').value, 10) % 24;
+    const isNight = hour >= TICKER_NIGHT_START_H || hour < TICKER_NIGHT_END_H;
+    track.style.animationPlayState = isNight ? 'paused' : 'running';
   }
 
   function renderTicker(titles) {
@@ -408,16 +455,12 @@
   camTick();
   fetchWeather();
   loadHeadlines();
+  tickerNightTick();
 
   setInterval(camTick, 5_000);
   setInterval(fetchWeather, WX_INTERVAL_MS);
   setInterval(loadHeadlines, RSS_INTERVAL_MS);
-  setInterval(() => {
-    if (hls) {
-      console.log('webcam: periodic re-attach (refresh session token)');
-      attachHls();
-    }
-  }, WEBCAM_PERIODIC_REATTACH_MS);
+  setInterval(tickerNightTick, TICKER_NIGHT_CHECK_MS);
 
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) return;
