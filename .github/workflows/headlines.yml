@@ -30,14 +30,27 @@ jobs:
           set -e
           URL="https://www.themountainmail.com/search/?q=&t=article&l=20&s=start_time&sd=desc&f=rss"
 
-          # The chrome wrapper sets all of curl-impersonate's TLS/H2 flags.
-          # We still send a realistic Referer; the wrapper handles the rest.
-          .ci/ci/curl_chrome116 --fail --max-time 30 \
-            --retry 4 --retry-delay 10 --retry-all-errors \
-            -H "Referer: https://www.themountainmail.com/" \
-            -H "Accept: application/rss+xml, application/xml;q=0.9, */*;q=0.8" \
-            "$URL" \
-            -o headlines.xml
+          # Cloudflare's rate-limit window for the runner IP regularly
+          # outlasts a fixed 10s retry budget, so curl --retry-delay would
+          # burn through all attempts inside one CF window. Exponential
+          # backoff with jitter: 20s, 40s, 80s, 160s between attempts.
+          delay=20
+          for attempt in 1 2 3 4 5; do
+            echo "Attempt $attempt"
+            if .ci/ci/curl_chrome116 --fail --max-time 30 \
+                -H "Referer: https://www.themountainmail.com/" \
+                -H "Accept: application/rss+xml, application/xml;q=0.9, */*;q=0.8" \
+                "$URL" -o headlines.xml; then
+              break
+            fi
+            if [ "$attempt" -eq 5 ]; then
+              echo "All attempts failed"
+              exit 1
+            fi
+            jitter=$((RANDOM % 10))
+            sleep $((delay + jitter))
+            delay=$((delay * 2))
+          done
 
           echo "--- size ---"
           wc -c headlines.xml
