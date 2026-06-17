@@ -45,6 +45,13 @@
   const WX_INTERVAL_MS = 15 * 60 * 1000;
   const WX_RETRY_MS = 60 * 1000;
 
+  // Arkansas River near Nathrop (USGS 07091200). riverflow.json is mirrored
+  // into the repo by the "Update river flow" GH Action every 30 min; the gauge
+  // itself reports every 15 min, so refetch the same-origin mirror on that beat.
+  const RIVER_PATH = 'riverflow.json';
+  const RIVER_INTERVAL_MS = 15 * 60 * 1000;
+  const RIVER_RETRY_MS = 60 * 1000;
+
   const RSS_PATH = 'headlines.xml';
   // headlines.xml is regenerated every 3h by the GH Action; refetching the
   // mirror more often than the source updates is wasted work.
@@ -111,13 +118,13 @@
   const el = {
     temp: $('temp'), cond: $('cond'), feels: $('feels'),
     hi: $('hi'), lo: $('lo'),
-    nowIcon: $('now-icon'),
     wind: $('wind'), humidity: $('humidity'), uv: $('uv'),
     dew: $('dew'), pressure: $('pressure'), cloud: $('cloud'),
     gusts: $('gusts'), sunrise: $('sunrise'), sunset: $('sunset'),
     stamp: $('wx-stamp'),
     cam: $('cam'), camTime: $('cam-time'), camStale: $('cam-stale'),
     days: $('days'),
+    riverFlow: $('river-flow'), riverGage: $('river-gage'),
   };
 
   /* ── Helpers ─────────────────────────────────────────────────────── */
@@ -331,7 +338,6 @@
     const lo = d.temperature_2m_min ? d.temperature_2m_min[0] : null;
     el.hi.textContent = fmtTemp(hi);
     el.lo.textContent = fmtTemp(lo);
-    el.nowIcon.innerHTML = today.icon;
 
     const wd = compass(c.wind_direction_10m);
     el.wind.textContent = (c.wind_speed_10m == null)
@@ -401,6 +407,38 @@
     el.days.replaceChildren(frag);
   }
 
+  /* ── River flow ──────────────────────────────────────────────────── */
+  let riverRetryHandle = null;
+
+  async function fetchRiver() {
+    if (riverRetryHandle) { clearTimeout(riverRetryHandle); riverRetryHandle = null; }
+    try {
+      // Cache-bust: GitHub Pages serves the mirror with a long cache TTL.
+      const res = await fetch(`${RIVER_PATH}?t=${Date.now()}`, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      const data = await res.json();
+      renderRiver(data);
+    } catch (err) {
+      // Keep last-good on screen; the workflow may not have committed
+      // riverflow.json yet (404) or the fetch transiently failed.
+      console.warn('river fetch failed', err);
+      riverRetryHandle = setTimeout(fetchRiver, RIVER_RETRY_MS);
+    }
+  }
+
+  function renderRiver(data) {
+    const p = (data && data.parameters) || {};
+    const flow = p['00060'];   // discharge, ft³/s
+    const gage = p['00065'];   // gage height, ft
+    if (flow && flow.value != null) {
+      const n = Math.round(parseFloat(flow.value));
+      el.riverFlow.textContent = Number.isNaN(n) ? '—' : n.toLocaleString('en-US');
+    }
+    if (gage && gage.value != null) {
+      el.riverGage.textContent = gage.value;   // server already sends e.g. "3.84"
+    }
+  }
+
   /* ── News ticker ─────────────────────────────────────────────────── */
   const escapeHtml = (s) => s.replace(/[&<>"']/g, (c) => ({
     '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;'
@@ -454,17 +492,20 @@
   startCam();
   camTick();
   fetchWeather();
+  fetchRiver();
   loadHeadlines();
   tickerNightTick();
 
   setInterval(camTick, 5_000);
   setInterval(fetchWeather, WX_INTERVAL_MS);
+  setInterval(fetchRiver, RIVER_INTERVAL_MS);
   setInterval(loadHeadlines, RSS_INTERVAL_MS);
   setInterval(tickerNightTick, TICKER_NIGHT_CHECK_MS);
 
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) return;
     fetchWeather();
+    fetchRiver();
     loadHeadlines();
     // After a long sleep the stream often won't resume on its own.
     if (el.cam.paused) el.cam.play().catch(() => {});

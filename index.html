@@ -12,7 +12,10 @@
   <main class="grid">
 
     <section class="panel current" aria-label="Current conditions">
-      <header class="loc">SALIDA, CO &middot; 7,083 FT</header>
+      <header class="loc">
+        <span>SALIDA, CO &middot; 7,083 FT</span>
+        <span class="stamp" id="wx-stamp">&mdash;</span>
+      </header>
 
       <div class="now">
         <div class="now-left">
@@ -27,7 +30,17 @@
             </div>
           </div>
         </div>
-        <div class="now-icon" id="now-icon" aria-hidden="true"></div>
+      </div>
+
+      <div class="river" aria-label="Arkansas River flow">
+        <header class="river-head">ARKANSAS RIVER &middot; NATHROP</header>
+        <div class="river-now">
+          <span class="river-flow" id="river-flow">&mdash;</span>
+          <span class="river-side">
+            <span class="river-unit">cfs</span>
+            <span class="river-gage">gage <span id="river-gage">&mdash;</span> ft</span>
+          </span>
+        </div>
       </div>
 
       <dl class="metrics">
@@ -41,8 +54,6 @@
         <div class="m"><dt>Sunrise</dt><dd id="sunrise">&mdash;</dd></div>
         <div class="m"><dt>Sunset</dt><dd id="sunset">&mdash;</dd></div>
       </dl>
-
-      <footer class="stamp" id="wx-stamp">&mdash;</footer>
     </section>
 
     <section class="panel cam" aria-label="Tenderfoot Mountain webcam">
