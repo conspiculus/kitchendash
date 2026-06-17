@@ -7,12 +7,6 @@
       "unit": "ft^3/s",
       "time": "2026-06-17T11:45:00+00:00",
       "approval": "Provisional"
-    },
-    "00065": {
-      "value": "3.84",
-      "unit": "ft",
-      "time": "2026-06-17T11:45:00+00:00",
-      "approval": "Provisional"
     }
   }
 }

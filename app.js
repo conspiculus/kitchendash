@@ -118,23 +118,15 @@
   const el = {
     temp: $('temp'), cond: $('cond'), feels: $('feels'),
     hi: $('hi'), lo: $('lo'),
-    wind: $('wind'), humidity: $('humidity'), uv: $('uv'),
-    dew: $('dew'), pressure: $('pressure'), cloud: $('cloud'),
-    gusts: $('gusts'), sunrise: $('sunrise'), sunset: $('sunset'),
+    wind: $('wind'), sunrise: $('sunrise'), sunset: $('sunset'),
     stamp: $('wx-stamp'),
     cam: $('cam'), camTime: $('cam-time'), camStale: $('cam-stale'),
     days: $('days'),
-    riverFlow: $('river-flow'), riverGage: $('river-gage'),
+    riverFlow: $('river-flow'),
   };
 
   /* ── Helpers ─────────────────────────────────────────────────────── */
   const fmtTemp = (n) => (n == null || Number.isNaN(n)) ? '—' : `${Math.round(n)}°`;
-  const fmtInt  = (n, suffix = '') => (n == null || Number.isNaN(n)) ? '—' : `${Math.round(n)}${suffix}`;
-  const fmtPressure = (hpa) => {
-    if (hpa == null) return '—';
-    const inHg = hpa * 0.02953;
-    return `${inHg.toFixed(2)} inHg`;
-  };
   const compass = (deg) => {
     if (deg == null) return '';
     const dirs = ['N','NNE','NE','ENE','E','ESE','SE','SSE','S','SSW','SW','WSW','W','WNW','NW','NNW'];
@@ -343,12 +335,6 @@
     el.wind.textContent = (c.wind_speed_10m == null)
       ? '—'
       : `${Math.round(c.wind_speed_10m)} mph ${wd}`.trim();
-    el.gusts.textContent = fmtInt(c.wind_gusts_10m, ' mph');
-    el.humidity.textContent = fmtInt(c.relative_humidity_2m, '%');
-    el.uv.textContent = (c.uv_index == null) ? '—' : c.uv_index.toFixed(1);
-    el.dew.textContent = fmtTemp(c.dew_point_2m);
-    el.pressure.textContent = fmtPressure(c.pressure_msl);
-    el.cloud.textContent = fmtInt(c.cloud_cover, '%');
     el.sunrise.textContent = fmtClock(d.sunrise && d.sunrise[0]);
     el.sunset.textContent  = fmtClock(d.sunset  && d.sunset[0]);
 
@@ -429,13 +415,9 @@
   function renderRiver(data) {
     const p = (data && data.parameters) || {};
     const flow = p['00060'];   // discharge, ft³/s
-    const gage = p['00065'];   // gage height, ft
     if (flow && flow.value != null) {
       const n = Math.round(parseFloat(flow.value));
       el.riverFlow.textContent = Number.isNaN(n) ? '—' : n.toLocaleString('en-US');
-    }
-    if (gage && gage.value != null) {
-      el.riverGage.textContent = gage.value;   // server already sends e.g. "3.84"
     }
   }
 
