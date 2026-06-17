@@ -1,0 +1,69 @@
+name: Update river flow
+on:
+  schedule:
+    - cron: '5,35 * * * *'   # every 30 min (offset off the hour to dodge runner congestion)
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Fetch river flow
+        env:
+          # api.waterdata.usgs.gov rate-limits anonymous callers; the key lifts
+          # the limit. Passed via the X-Api-Key header (the docs also allow an
+          # ?api_key= query param, but the header keeps the key out of logs/URLs).
+          USGS_API_KEY: ${{ secrets.USGS_API_KEY }}
+        run: |
+          set -e
+          # USGS-07091200 = "Arkansas River near Nathrop, CO" (Browns Canyon).
+          # No parameter_code filter -> the site's latest value for every
+          # continuous parameter (currently 00060 discharge + 00065 gage height).
+          URL="https://api.waterdata.usgs.gov/ogcapi/v0/collections/latest-continuous/items?monitoring_location_id=USGS-07091200&f=json"
+
+          curl --fail --max-time 30 \
+            -H "X-Api-Key: ${USGS_API_KEY}" \
+            -H "Accept: application/json" \
+            "$URL" -o raw.json
+
+          echo "--- raw size ---"
+          wc -c raw.json
+
+          # Bail if the gauge returned nothing, so we never overwrite good data
+          # with an empty FeatureCollection.
+          test "$(jq -r '.numberReturned' raw.json)" -gt 0
+
+          # Normalize to a small, stable shape. Deliberately DROP the response's
+          # top-level "timeStamp" (request time) and "links" so the file only
+          # changes when the actual reading changes -> no noisy 30-min commits.
+          jq '{
+            site_id: "USGS-07091200",
+            site_name: "Arkansas River near Nathrop, CO",
+            parameters: (
+              [ .features[].properties
+                | { (.parameter_code): {
+                      value: .value,
+                      unit: .unit_of_measure,
+                      time: .time,
+                      approval: .approval_status
+                  } }
+              ] | add
+            )
+          }' raw.json > riverflow.json
+
+          rm -f raw.json
+          echo "--- riverflow.json ---"
+          cat riverflow.json
+
+      - name: Commit if changed
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add riverflow.json
+          git diff --staged --quiet || git commit -m "Update river flow $(date -u +'%Y-%m-%d %H:%M UTC')"
+          git push
