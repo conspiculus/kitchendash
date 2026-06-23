@@ -10,13 +10,23 @@
 		www.themountainmail.com - RSS Results
 		only for asset type(s) of article
 	</description>
-        <generator>TNCMS 1.93.3</generator>
+        <generator>TNCMS 1.94.0</generator>
         <docs>http://www.rssboard.org/rss-specification</docs>
         <ttl>30</ttl>
 
         <item>
+            <title>Center for Biological Diversity hosts forest field trip throughout Chaffee</title>
+            <description>The Center for Biological Diversity hosted a tour of Chaffee County led by three fire ecology and forest experts June 17, to share their thoughts on the negative effects of steep-slope logging and large-scale mastication projects.</description>
+            <pubDate>Tue, 23 Jun 2026 11:51:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/df9db85d-5f00-469b-99fb-15712022c42c</guid>
+            <link>https://www.themountainmail.com/news/center-for-biological-diversity-hosts-forest-field-trip-throughout-chaffee/article_df9db85d-5f00-469b-99fb-15712022c42c.html</link>
+            <dc:creator>Leslie Carrigan, Mail Intern</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/d/3e/d3e3002d-5dd6-4be1-8ada-930687cc8a49/6a3ac800214b8.image.jpg?resize=300%2C200" length="388009" type="image/jpeg" />
+        </item>
+
+        <item>
             <title>Stover wins ‘brutal’ Triple crown, running partner close behind</title>
-            <description>Mason Stover, 17, from Westcliffe has never run a race quite like the triple crown races of Salida, he said. Stover won the Triple crown series, including the Tenderfoot Hill Climb, the 10k Road Race and the 10K Trail Run&#8230;</description>
+            <description>Mason Stover, 17, of Westcliffe has never run a race quite like the FIBArk Triple Crown races of Salida, he said. Stover won the Triple Crown series with a total time of 1 hour, 36 minutes, 10 seconds for three&#8230;</description>
             <pubDate>Mon, 22 Jun 2026 16:58:00 -0600</pubDate>
             <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/3ab5fe1c-2b95-45b3-9687-7938a1adad2a</guid>
             <link>https://www.themountainmail.com/news/stover-wins-brutal-triple-crown-running-partner-close-behind/article_3ab5fe1c-2b95-45b3-9687-7938a1adad2a.html</link>
@@ -173,7 +183,7 @@
 
         <item>
             <title>In a ‘dramatic pivot,’ The Alliance cuts staff in half</title>
-            <description>After a couple years of pivoting in the wake of federal funding decreases, The Alliance recently made the difficult decision to dismiss three of their full time staff members.</description>
+            <description>Editor's Note: This story was updated June 23.</description>
             <pubDate>Thu, 18 Jun 2026 14:22:00 -0600</pubDate>
             <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/2af5ff55-c466-4514-8415-255f3a0994cc</guid>
             <link>https://www.themountainmail.com/news/in-a-dramatic-pivot-the-alliance-cuts-staff-in-half/article_2af5ff55-c466-4514-8415-255f3a0994cc.html</link>
@@ -189,16 +199,6 @@
             <link>https://www.themountainmail.com/news/salida-hot-springs-to-host-lifeguard-class/article_4b8063d2-227c-40ed-bb2c-4c49358f582a.html</link>
             <dc:creator>Leslie Carrigan, Mail Intern</dc:creator>
             <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/1/55/155564f1-3f72-4876-9afd-2689b2567e10/6a3441cf087f3.image.jpg?resize=300%2C200" length="125576" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Church Column What does it mean to be ‘blessed’?</title>
-            <description>What does it mean to be “blessed”? It’s not uncommon for people, regardless of spiritual beliefs, to say they are “blessed.” Depending on who you ask, blessing might come from having approval and esteem from many people. Or having an&#8230;</description>
-            <pubDate>Thu, 18 Jun 2026 11:30:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/92d85b4c-3935-4a7c-8c76-7bad17f9192b</guid>
-            <link>https://www.themountainmail.com/opinion/church-column-what-does-it-mean-to-be-blessed/article_92d85b4c-3935-4a7c-8c76-7bad17f9192b.html</link>
-            <dc:creator>By Ellen Horarik, Church Columnist</dc:creator>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/0/23/02316894-bbc4-11ee-a4fa-d339384c14bf/65b2cac96727f.image.jpg?resize=300%2C394" length="76554" type="image/jpeg" />
         </item>
 
     </channel>
