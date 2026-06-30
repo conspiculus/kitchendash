@@ -10,9 +10,48 @@
 		www.themountainmail.com - RSS Results
 		only for asset type(s) of article
 	</description>
-        <generator>TNCMS 1.94.0</generator>
+        <generator>TNCMS 1.94.1</generator>
         <docs>http://www.rssboard.org/rss-specification</docs>
         <ttl>30</ttl>
+
+        <item>
+            <title>Inaugural drone show attracts hundreds, includes games and activities</title>
+            <description>To celebrate the country’s 250 years and Colorado’s 150, a drone light show lit up the night sky June 28 at Chaffee County Fairgrounds in Poncha Springs, along with many other activities throughout the day, including vendors, food trucks, skating&#8230;</description>
+            <pubDate>Tue, 30 Jun 2026 16:10:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/174e25a1-fe01-47f0-874c-4dbf7a5ce2b2</guid>
+            <link>https://www.themountainmail.com/news/inaugural-drone-show-attracts-hundreds-includes-games-and-activities/article_174e25a1-fe01-47f0-874c-4dbf7a5ce2b2.html</link>
+            <dc:creator>Lijah Sampson, Mail Staff Writer</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/c/d9/cd9ea32e-b61b-45c7-af57-a174653bff5f/6a443be591746.image.jpg?resize=300%2C200" length="139027" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Chalk Fest draws over 400 attendees, Gramann hosts art class</title>
+            <description>The third annual Chalk Fest on June 27 attracted more than 400 visitors to downtown Salida with bright, sunny weather, no rain and works of art by 25 professional artists, both regional and local, as well as creations by kids&#8230;</description>
+            <pubDate>Tue, 30 Jun 2026 15:15:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/dda2f7bf-2308-4394-82e6-07c3d028db13</guid>
+            <link>https://www.themountainmail.com/news/chalk-fest-draws-over-400-attendees-gramann-hosts-art-class/article_dda2f7bf-2308-4394-82e6-07c3d028db13.html</link>
+            <dc:creator>Lijah Sampson, Mail Staff Writer</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/7/0a/70a3af23-72a3-46ab-86c9-5b987650f336/6a4430bc77b0d.image.jpg?resize=300%2C200" length="458595" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Event Calendar, July 2-9</title>
+            <description>Thurs., July 2 - Buena Vista - 6-8 p.m. – 101st Army Band performs at Concerts in the Park at McPhelemy Park, U.S. 24 at Main Street. Donations to musicians appreciated.</description>
+            <pubDate>Tue, 30 Jun 2026 13:40:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/2cd4b788-7cfd-4fab-8bd8-b81d1467a5ed</guid>
+            <link>https://www.themountainmail.com/news/event-calendar-july-2-9/article_2cd4b788-7cfd-4fab-8bd8-b81d1467a5ed.html</link>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/d/89/d8906c99-44e2-4af8-a18f-d122ae559969/686c0ca064d96.image.jpg?resize=300%2C200" length="468410" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Salida and Poncha to celebrate Fourth with performances, games</title>
+            <description>Although high fire risk has canceled fireworks this year, Fourth of July celebrations will feature new and returning performances and activities for the public to enjoy in both Salida and Poncha Springs.</description>
+            <pubDate>Tue, 30 Jun 2026 13:01:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/54ede6fb-e9ed-4250-9781-32182f75e5c0</guid>
+            <link>https://www.themountainmail.com/news/salida-and-poncha-to-celebrate-fourth-with-performances-games/article_54ede6fb-e9ed-4250-9781-32182f75e5c0.html</link>
+            <dc:creator>Lijah Sampson, Mail Staff Writer</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/1/83/1838fdcc-3b04-11ef-936e-dffa636552bf/668848406451f.image.jpg?resize=300%2C200" length="334367" type="image/jpeg" />
+        </item>
 
         <item>
             <title>Obituary: Raffaela 'Ruth' Francesca Guccione</title>
@@ -164,43 +203,6 @@
             <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/6b237a6f-2e7d-45b1-b464-f2a6811a4294</guid>
             <link>https://www.themountainmail.com/obituaries/obituary-robert-backofen/article_6b237a6f-2e7d-45b1-b464-f2a6811a4294.html</link>
             <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/2/ef/2ef624fd-0a9b-42c8-b8e0-2ff1c7e71560/6a3b0db5e4efc.image.jpg?crop=814%2C611%2C161%2C270&amp;resize=300%2C225&amp;order=crop%2Cresize" length="592237" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Commissioners, Monarch meet with Xcel</title>
-            <description>Chaffee County commissioners met with Ashley Valdez, Steve Roalstad and other representatives from Xcel Energy for a discussion about Chaffee County and Monarch Mountain in a special work session June 23.</description>
-            <pubDate>Fri, 26 Jun 2026 08:24:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/e7e2686c-a4af-4f81-9bf9-34112816c0c9</guid>
-            <link>https://www.themountainmail.com/news/commissioners-monarch-meet-with-xcel/article_e7e2686c-a4af-4f81-9bf9-34112816c0c9.html</link>
-            <dc:creator>Jack Sellner, Mail Staff Writer</dc:creator>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/1/f1/1f1c361a-fb6f-11ee-9e0d-fb4e9be4e071/661d9c281290c.image.jpg?resize=300%2C223" length="604733" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Collins ties for first at 2026 Archery World Champs in Florida</title>
-            <description>Lane Collins represented Moffat Middle School and the state of Colorado at the 2026 National Archery in the Schools Program (NASP) Open and World Championships June 18-20 in Daytona Beach, Florida.</description>
-            <pubDate>Thu, 25 Jun 2026 15:00:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/91870912-eb0d-4987-b65f-fc1c1abb9067</guid>
-            <link>https://www.themountainmail.com/news/collins-ties-for-first-at-2026-archery-world-champs-in-florida/article_91870912-eb0d-4987-b65f-fc1c1abb9067.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/4/b8/4b8d13d6-d809-46f0-9008-5dc2e0e78637/6a3b1bdbc287f.image.jpg?crop=1066%2C801%2C127%2C242&amp;resize=300%2C225&amp;order=crop%2Cresize" length="331630" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Obituary: Darell Keith Alexander</title>
-            <description>In loving memory of Darell Keith Alexander:</description>
-            <pubDate>Thu, 25 Jun 2026 14:00:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/4eb96753-0c51-40af-a07c-ce841eec5d8e</guid>
-            <link>https://www.themountainmail.com/obituaries/obituary-darell-keith-alexander/article_4eb96753-0c51-40af-a07c-ce841eec5d8e.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/b/b2/bb24a1ec-97c2-49da-8fa7-8d9be50f9909/6a3b0d3316119.image.jpg?resize=300%2C357" length="243155" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Past Tense, June 25-July 1</title>
-            <description>140 Years Ago - Salida Weekly Mail, June 25, 1886: Yesterday the new bell in the central school building pealed forth for the first time and gave evidence of a mellow voice and fine quality. The new stranger comes from&#8230;</description>
-            <pubDate>Thu, 25 Jun 2026 13:11:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/9f4ae62f-2100-4f30-a004-01c333cefed4</guid>
-            <link>https://www.themountainmail.com/news/past-tense-june-25-july-1/article_9f4ae62f-2100-4f30-a004-01c333cefed4.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/9/7c/97c01297-84dc-43a8-9697-37a9f7a72c8b/67f437f0a4a13.image.jpg?resize=300%2C134" length="315460" type="image/jpeg" />
         </item>
 
     </channel>
