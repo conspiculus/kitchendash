@@ -3,9 +3,9 @@
   "site_name": "Arkansas River near Nathrop, CO",
   "parameters": {
     "00060": {
-      "value": "227",
+      "value": "224",
       "unit": "ft^3/s",
-      "time": "2026-07-10T16:45:00+00:00",
+      "time": "2026-07-10T18:45:00+00:00",
       "approval": "Provisional"
     }
   }
