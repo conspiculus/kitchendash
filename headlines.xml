@@ -10,9 +10,29 @@
 		www.themountainmail.com - RSS Results
 		only for asset type(s) of article
 	</description>
-        <generator>TNCMS 1.94.1</generator>
+        <generator>TNCMS 1.94.2</generator>
         <docs>http://www.rssboard.org/rss-specification</docs>
         <ttl>30</ttl>
+
+        <item>
+            <title>CPW releases 300 trout in Monarch Park ponds</title>
+            <description>The two-year rehabilitation project at Monarch Park officially culminated with the release of 300 rainbow trout into the three ponds July 13.</description>
+            <pubDate>Wed, 15 Jul 2026 12:30:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/c0e68c3e-5219-4fcb-a1dd-d760edfe88e4</guid>
+            <link>https://www.themountainmail.com/news/cpw-releases-300-trout-in-monarch-park-ponds/article_c0e68c3e-5219-4fcb-a1dd-d760edfe88e4.html</link>
+            <dc:creator>Cailey McDermott, Managing Editor</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/0/cf/0cfdcc75-363d-47de-be07-4695f9eb51b0/6a57cc7c096dc.image.jpg?resize=300%2C200" length="417624" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Commissioners hear updates from departments</title>
+            <description>Chaffee County commissioners hosted a work session to hear reports and updates from local government departments, public agencies and community development services July 13.</description>
+            <pubDate>Wed, 15 Jul 2026 09:56:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/4bd28a4a-fc13-4c2c-ad1c-b3ea286f7459</guid>
+            <link>https://www.themountainmail.com/news/commissioners-hear-updates-from-departments/article_4bd28a4a-fc13-4c2c-ad1c-b3ea286f7459.html</link>
+            <dc:creator>Jack Sellner, OMG Reporter</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/1/f1/1f1c361a-fb6f-11ee-9e0d-fb4e9be4e071/661d9c281290c.image.jpg?resize=300%2C223" length="604733" type="image/jpeg" />
+        </item>
 
         <item>
             <title>Columbine Gem and Mineral to meet at Texas Creek</title>
@@ -186,26 +206,6 @@
             <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/17860185-7843-4ecd-afb9-d67779d83418</guid>
             <link>https://www.themountainmail.com/news/chaffee-county-women-who-care-to-meet-july-14-in-bv/article_17860185-7843-4ecd-afb9-d67779d83418.html</link>
             <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/1/91/191bfc66-da05-4fb8-a833-10f27406eaeb/6a4fddd148085.image.jpg?resize=300%2C285" length="35937" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Banana Belt Snow Cones offers ‘endless options’</title>
-            <description>Banana Belt Snow Cones, a pop-up venue based in Salida, offers “endless options” for customers to try.</description>
-            <pubDate>Sat, 11 Jul 2026 10:30:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/f90c8eaf-cf37-4730-80ae-f5f738a3a31f</guid>
-            <link>https://www.themountainmail.com/news/banana-belt-snow-cones-offers-endless-options/article_f90c8eaf-cf37-4730-80ae-f5f738a3a31f.html</link>
-            <dc:creator>Lijah Sampson, Mail Staff Writer</dc:creator>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/c/07/c07697ea-75e7-4759-97fc-d5888e862d54/6a4e9b6677820.image.jpg?resize=300%2C200" length="362250" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Nachtrieb recognized for Poncha Springs contributions</title>
-            <description>Editor's Note: Deepest apologies, thought this had run ages ago!</description>
-            <pubDate>Fri, 10 Jul 2026 15:45:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/20623899-3cee-40fd-8620-e69e45abc118</guid>
-            <link>https://www.themountainmail.com/news/nachtrieb-recognized-for-poncha-springs-contributions/article_20623899-3cee-40fd-8620-e69e45abc118.html</link>
-            <dc:creator>Lijah Sampson, Mail Staff Writer</dc:creator>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/c/2b/c2b61a76-1d0f-481b-aa02-3c5e6c8d9799/6a4ea992afd8c.image.jpg?resize=300%2C200" length="585907" type="image/jpeg" />
         </item>
 
     </channel>
