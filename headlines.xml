@@ -10,9 +10,19 @@
 		www.themountainmail.com - RSS Results
 		only for asset type(s) of article
 	</description>
-        <generator>TNCMS 1.94.2</generator>
+        <generator>TNCMS 1.94.3</generator>
         <docs>http://www.rssboard.org/rss-specification</docs>
         <ttl>30</ttl>
+
+        <item>
+            <title>Tidwell to present 12 years of art, story of healing</title>
+            <description>After 12 years of painting for himself as a form of processing and therapy, Dustin Tidwell will display his healing journey Aug. 29 at 127 E. First St., Salida, with doors opening at 6 p.m. The show is titled “Painted&#8230;</description>
+            <pubDate>Tue, 25 Aug 2026 16:00:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/9f903a28-9625-4f5b-96dc-602f48ba60cd</guid>
+            <link>https://www.themountainmail.com/news/tidwell-to-present-12-years-of-art-story-of-healing/article_9f903a28-9625-4f5b-96dc-602f48ba60cd.html</link>
+            <dc:creator>by Lijah Sampson, Mail Reporter</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/b/e2/be205e98-a914-4a18-a0d0-3309ad58b0c1/6a8e0e3a8a393.image.jpg?resize=300%2C200" length="588857" type="image/jpeg" />
+        </item>
 
         <item>
             <title>Clinton and Scanga tie with Aldaz and Vigil in Chaffee County Open</title>
@@ -54,11 +64,11 @@
         </item>
 
         <item>
-            <title>Commissioners make formal comment to railroad for rails-to-trails</title>
+            <title>Commissioners make formal comment to railroad regulator with eyes on a rails-to-trails project</title>
             <description>Chaffee County commissioners are asking federal regulators to revive consideration of a regional trail along the Tennessee Pass railroad corridor as part of their review of a proposed Union Pacific-Norfolk Southern merger.</description>
             <pubDate>Mon, 24 Aug 2026 14:20:00 -0600</pubDate>
             <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/7bcb729b-08f2-401a-9801-e4c85a44778b</guid>
-            <link>https://www.themountainmail.com/news/commissioners-make-formal-comment-to-railroad-for-rails-to-trails/article_7bcb729b-08f2-401a-9801-e4c85a44778b.html</link>
+            <link>https://www.themountainmail.com/news/commissioners-make-formal-comment-to-railroad-regulator-with-eyes-on-a-rails-to-trails-project/article_7bcb729b-08f2-401a-9801-e4c85a44778b.html</link>
             <dc:creator>Max R. Smith, Times Reporter</dc:creator>
             <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/9/72/9729e16e-b0e8-11ef-8e12-1b197b430e69/674e12cfb8868.image.jpg?resize=300%2C199" length="62007" type="image/jpeg" />
         </item>
@@ -179,7 +189,7 @@
 
         <item>
             <title>Shooting in Wellsville puts Steve Finch in hospital</title>
-            <description>After a traffic dispute in Wellsville at about 10:30 p.m. Aug. 1, longtime local Steve Finch was shot. He remains in the Heart of the Rockies Regional Medical Center, recovering from his injuries.</description>
+            <description>Longtime local Steve Finch was shot after a traffic dispute in Wellsville at about 10:30 p.m. Aug. 1. He remains in Heart of the Rockies Regional Medical Center, recovering from his injuries.</description>
             <pubDate>Thu, 20 Aug 2026 15:48:00 -0600</pubDate>
             <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/80f1617c-4493-43b9-9b3c-abc9db95f9cb</guid>
             <link>https://www.themountainmail.com/news/shooting-in-wellsville-puts-steve-finch-in-hospital/article_80f1617c-4493-43b9-9b3c-abc9db95f9cb.html</link>
@@ -194,15 +204,6 @@
             <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/8c198181-60fe-401d-9d5b-422c28f049a4</guid>
             <link>https://www.themountainmail.com/news/salida-fiber-festival-seeks-volunteers/article_8c198181-60fe-401d-9d5b-422c28f049a4.html</link>
             <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/a/04/a044b080-6eee-11ef-a69f-bf3ffabe9b9f/66df623a61fd8.image.jpg?resize=300%2C200" length="353778" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Obituary: Lois Rae Martinez</title>
-            <description>Lois Rae Martinez, 88, beloved mother, grandmother, great-grandmother, and cherished friend to all who knew her, passed away peacefully on Aug. 12, 2026, at her family home in Salida, Colorado.</description>
-            <pubDate>Thu, 20 Aug 2026 14:09:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/df5822f3-5ea4-4847-95a5-b8cc0c20db99</guid>
-            <link>https://www.themountainmail.com/obituaries/obituary-lois-rae-martinez/article_df5822f3-5ea4-4847-95a5-b8cc0c20db99.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/1/4f/14fcc926-2aa1-491d-9788-c72aca9f3ee1/6a836aba3db02.image.jpg?resize=300%2C252" length="325605" type="image/jpeg" />
         </item>
 
     </channel>
