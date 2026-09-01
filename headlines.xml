@@ -10,9 +10,48 @@
 		www.themountainmail.com - RSS Results
 		only for asset type(s) of article
 	</description>
-        <generator>TNCMS 1.95.0</generator>
+        <generator>TNCMS 1.95.2</generator>
         <docs>http://www.rssboard.org/rss-specification</docs>
         <ttl>30</ttl>
+
+        <item>
+            <title>Commissioners hear assessor’s update, talk property tax changes</title>
+            <description>The Chaffee County Board of County Commissioners heard an update at their Aug. 31 work session from County Assessor Janie Williams about trends in appeals and property taxes in 2026 and beyond.</description>
+            <pubDate>Tue, 01 Sep 2026 15:30:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/428e908a-097d-4d2e-8968-3d0804885ec0</guid>
+            <link>https://www.themountainmail.com/news/commissioners-hear-assessor-s-update-talk-property-tax-changes/article_428e908a-097d-4d2e-8968-3d0804885ec0.html</link>
+            <dc:creator>Josh Pike, OMG Reporter</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/1/f1/1f1c361a-fb6f-11ee-9e0d-fb4e9be4e071/661d9c281290c.image.jpg?resize=300%2C223" length="604733" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Event Calendar, Sept. 3-10</title>
+            <description>Thurs., Sept. 3 - Buena Vista - 8 a.m.-5 p.m. – Chaffee Rec Adopters Workday: Missouri Gulch Bridge TLC will assist U.S. Forest Service and Colorado Trail Foundation with replacing handrails and surface material at bridge approaches. Info, directions and&#8230;</description>
+            <pubDate>Tue, 01 Sep 2026 15:22:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/52296d94-77a8-4186-9f35-b47446de3f59</guid>
+            <link>https://www.themountainmail.com/things_to_do/event-calendar-sept-3-10/article_52296d94-77a8-4186-9f35-b47446de3f59.html</link>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/b/73/b73801da-b5e6-4e25-ab55-e4261b51aac2/68ed5f00a2545.image.jpg?resize=300%2C225" length="414496" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Blockage in Arkansas caused by rain event, breaking up naturally</title>
+            <description>Wood debris, logs and twigs created a blockage in the Arkansas River south of Hecla Junction after a single rain event Aug. 22.</description>
+            <pubDate>Tue, 01 Sep 2026 15:15:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/3280cafb-9288-4c21-ac71-a421b2399167</guid>
+            <link>https://www.themountainmail.com/news/blockage-in-arkansas-caused-by-rain-event-breaking-up-naturally/article_3280cafb-9288-4c21-ac71-a421b2399167.html</link>
+            <dc:creator>Cailey McDermott, Managing Editor</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/1/9e/19ea00b4-5171-4dad-a603-ecd848597656/6a973f8f88af5.image.jpg?resize=300%2C225" length="747411" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Council learns food, cardboard, wood top waste at landfill</title>
+            <description>Salida City Council heard, during an Aug. 31 work session, a regional sustainability update from Sara Law and Julie Mach.</description>
+            <pubDate>Tue, 01 Sep 2026 14:58:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/d19d303f-4d7b-4a24-81ea-bae3554c21e5</guid>
+            <link>https://www.themountainmail.com/news/council-learns-food-cardboard-wood-top-waste-at-landfill/article_d19d303f-4d7b-4a24-81ea-bae3554c21e5.html</link>
+            <dc:creator>Cailey McDermott, Managing Editor</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/6/22/622e4116-9547-11ee-ba26-7f29d0ed6ef4/657238d870bd4.image.jpg?resize=300%2C195" length="417637" type="image/jpeg" />
+        </item>
 
         <item>
             <title>Places to Age opens waitlist</title>
@@ -162,44 +201,6 @@
             <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/b2bad0df-d61b-4514-a3fa-2b168eac182b</guid>
             <link>https://www.themountainmail.com/news/pickleball-teams-throughout-the-west-head-to-salida-tournament/article_b2bad0df-d61b-4514-a3fa-2b168eac182b.html</link>
             <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/6a/36ae2cc2-7007-11ef-9724-1f832f2e84d3/66e1390780eac.image.jpg?resize=300%2C200" length="424899" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Poncha Springs Town Hall installs new sound system</title>
-            <description>Poncha Springs Town Hall recently installed a brand-new sound system that will enhance users’ experience for events and meetings. To honor the growing community, the town offered a free concert Aug. 22 featuring folk singer-songwriter Eunice “Tula” Collette.</description>
-            <pubDate>Fri, 28 Aug 2026 11:03:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/59dfa6cc-d19f-4da4-a7f5-5998cac2b4fc</guid>
-            <link>https://www.themountainmail.com/news/poncha-springs-town-hall-installs-new-sound-system/article_59dfa6cc-d19f-4da4-a7f5-5998cac2b4fc.html</link>
-            <dc:creator>Lijah Sampson, Mail Reporter</dc:creator>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/5/42/54231c84-d108-4ba2-a9b6-d092e1137d2b/6a8f54fc5304f.image.jpg?resize=300%2C201" length="275594" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Dear Editor: Readers thank Kyle Peterson of KYPY Construction</title>
-            <description>Dear Editor:</description>
-            <pubDate>Fri, 28 Aug 2026 11:00:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/2ef3b73a-c10c-4aeb-b0b9-114260704cfa</guid>
-            <link>https://www.themountainmail.com/opinion/dear-editor-readers-thank-kyle-peterson-of-kypy-construction/article_2ef3b73a-c10c-4aeb-b0b9-114260704cfa.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Chaffee County Road and Bridge developing mapping tool</title>
-            <description>Chaffee County is developing an interactive map intended to give residents easier access to information about county-maintained roads, construction projects, bridges and other transportation infrastructure.</description>
-            <pubDate>Fri, 28 Aug 2026 10:00:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/02d1389a-b36c-49c4-94dd-e427d17eceef</guid>
-            <link>https://www.themountainmail.com/news/chaffee-county-road-and-bridge-developing-mapping-tool/article_02d1389a-b36c-49c4-94dd-e427d17eceef.html</link>
-            <dc:creator>By Max R. Smith, Times Reporter</dc:creator>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/9/72/9729e16e-b0e8-11ef-8e12-1b197b430e69/674e12cfb8868.image.jpg?resize=300%2C199" length="62007" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>New Arrival: Gia Opal Viola</title>
-            <description>Melanie and Nicholas Viola of Salida are the new parents of a daughter, Gia Opal Viola.</description>
-            <pubDate>Fri, 28 Aug 2026 08:49:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/64611b58-851d-4c52-b2d1-93cdaff26745</guid>
-            <link>https://www.themountainmail.com/news/new-arrival-gia-opal-viola/article_64611b58-851d-4c52-b2d1-93cdaff26745.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/15/3154dd55-401a-453b-babc-b4fc08535da3/6a8e4c3f20997.image.jpg?crop=1261%2C946%2C8%2C206&amp;resize=300%2C225&amp;order=crop%2Cresize" length="277101" type="image/jpeg" />
         </item>
 
     </channel>
