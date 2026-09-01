@@ -10,9 +10,28 @@
 		www.themountainmail.com - RSS Results
 		only for asset type(s) of article
 	</description>
-        <generator>TNCMS 1.94.3</generator>
+        <generator>TNCMS 1.95.0</generator>
         <docs>http://www.rssboard.org/rss-specification</docs>
         <ttl>30</ttl>
+
+        <item>
+            <title>Places to Age opens waitlist</title>
+            <description>Places to Age will open its waitlist at 8 a.m. Sept. 1 for individuals interested in future independent living, assisted living, or memory care at the planned Places to Age senior living community.</description>
+            <pubDate>Mon, 31 Aug 2026 15:45:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/eb256107-66d0-4d4c-b4f1-768d2df5000a</guid>
+            <link>https://www.themountainmail.com/news/places-to-age-opens-waitlist/article_eb256107-66d0-4d4c-b4f1-768d2df5000a.html</link>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/2/6b/26b2aeb6-69f8-11ef-baf6-a3c7cf207915/66d70eab5e614.image.jpg?resize=300%2C147" length="60907" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>After five games, volleyball team is undefeated</title>
+            <description>Five games into the 2026 season and the Salida Spartans volleyball team is undefeated.</description>
+            <pubDate>Mon, 31 Aug 2026 14:09:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/c65b066a-182e-47dd-9464-ecdcb74cf0a5</guid>
+            <link>https://www.themountainmail.com/news/after-five-games-volleyball-team-is-undefeated/article_c65b066a-182e-47dd-9464-ecdcb74cf0a5.html</link>
+            <dc:creator>Jack Sellner, Sports Desk</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/7/86/7867cca9-f696-4c22-8cab-26abde34d764/6a8c8a69d59b6.image.jpg?resize=300%2C200" length="474391" type="image/jpeg" />
+        </item>
 
         <item>
             <title>Creede Repertory Theater offers free theater for Salida kids Sept. 4</title>
@@ -181,25 +200,6 @@
             <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/64611b58-851d-4c52-b2d1-93cdaff26745</guid>
             <link>https://www.themountainmail.com/news/new-arrival-gia-opal-viola/article_64611b58-851d-4c52-b2d1-93cdaff26745.html</link>
             <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/15/3154dd55-401a-453b-babc-b4fc08535da3/6a8e4c3f20997.image.jpg?crop=1261%2C946%2C8%2C206&amp;resize=300%2C225&amp;order=crop%2Cresize" length="277101" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Obituary: Wanda Juanita Negley</title>
-            <description>Wanda Juanita Negley, 92, passed away Aug. 18, 2026, in Pueblo.</description>
-            <pubDate>Fri, 28 Aug 2026 08:05:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/c7175afe-6dd0-45d4-800f-2bc2a0f97e83</guid>
-            <link>https://www.themountainmail.com/obituaries/obituary-wanda-juanita-negley/article_c7175afe-6dd0-45d4-800f-2bc2a0f97e83.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/f/31/f31cff90-790f-49ac-9517-4fc50b58e9ba/6a90505cacc77.image.jpg?crop=778%2C584%2C172%2C223&amp;resize=300%2C225&amp;order=crop%2Cresize" length="183537" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Red Ladies Rafting earns spot at Worlds in Brazil</title>
-            <description>Despite low water impacting training, the Red Ladies Rafting Team earned two first-place victories at Nationals competition in California Aug. 13-15 and will represent the USA in the women’s open category at Worlds in November.</description>
-            <pubDate>Thu, 27 Aug 2026 15:01:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/05a06d54-dde7-43c2-8a9f-28e22ca884f0</guid>
-            <link>https://www.themountainmail.com/news/red-ladies-rafting-earns-spot-at-worlds-in-brazil/article_05a06d54-dde7-43c2-8a9f-28e22ca884f0.html</link>
-            <dc:creator>Cailey McDermott, Managing Editor</dc:creator>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/4/90/490d1b1c-bf8d-4281-baea-ce52a61fad97/6a8f547cce93d.image.jpg?resize=300%2C169" length="466041" type="image/jpeg" />
         </item>
 
     </channel>
