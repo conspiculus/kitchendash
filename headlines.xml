@@ -10,9 +10,48 @@
 		www.themountainmail.com - RSS Results
 		only for asset type(s) of article
 	</description>
-        <generator>TNCMS 1.95.2</generator>
+        <generator>TNCMS 1.95.3</generator>
         <docs>http://www.rssboard.org/rss-specification</docs>
         <ttl>30</ttl>
+
+        <item>
+            <title>Salida football falls to Pagosa 41-6 in season opener</title>
+            <description>The Salida High School football team opened their season with a 41-6 loss to Pagosa Springs Aug. 28 on the road.</description>
+            <pubDate>Wed, 02 Sep 2026 16:00:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/a13e6e13-dd8b-4bc9-be5f-51cc4441c1c3</guid>
+            <link>https://www.themountainmail.com/news/salida-football-falls-to-pagosa-41-6-in-season-opener/article_a13e6e13-dd8b-4bc9-be5f-51cc4441c1c3.html</link>
+            <dc:creator>by Jack Sellner, Sports Desk</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/e/2b/e2bbc416-2191-479f-bb5a-f7c194f7bcdc/6a986b3984454.image.jpg?resize=300%2C202" length="466704" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Commissioners approve transfer of archery range to CPW</title>
+            <description>Chaffee County commissioners at their Sept. 1 meeting unanimously approved a lease transferring operation and maintenance of the Chaffee County archery range, located on the county landfill property, to Colorado Parks and Wildlife.</description>
+            <pubDate>Wed, 02 Sep 2026 15:30:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/704b62aa-d01f-433d-b494-5282df52c811</guid>
+            <link>https://www.themountainmail.com/news/commissioners-approve-transfer-of-archery-range-to-cpw/article_704b62aa-d01f-433d-b494-5282df52c811.html</link>
+            <dc:creator>Josh Pike, OMG Reporter</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/9/72/9729e16e-b0e8-11ef-8e12-1b197b430e69/674e12cfb8868.image.jpg?resize=300%2C199" length="62007" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Dear Editor: Kudos to McFarland on new soccer mural</title>
+            <description>Dear Editor:</description>
+            <pubDate>Wed, 02 Sep 2026 15:00:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/30e2b5fd-5824-4070-aad2-2990dac88088</guid>
+            <link>https://www.themountainmail.com/opinion/dear-editor-kudos-to-mcfarland-on-new-soccer-mural/article_30e2b5fd-5824-4070-aad2-2990dac88088.html</link>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>County approves letter clarifying ownership of Forest Service Road 295</title>
+            <description>Chaffee County commissioners unanimously approved a letter to the U.S. Forest Service declaring that the county does not own Forest Service Road 295, which runs between St. Elmo and Hancock, during their Sept. 1 meeting.</description>
+            <pubDate>Wed, 02 Sep 2026 14:00:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/a7d82eb9-71a0-49d4-a234-8a31f6050319</guid>
+            <link>https://www.themountainmail.com/news/county-approves-letter-clarifying-ownership-of-forest-service-road-295/article_a7d82eb9-71a0-49d4-a234-8a31f6050319.html</link>
+            <dc:creator>By Josh Pike, OMG Reporter</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/1/f1/1f1c361a-fb6f-11ee-9e0d-fb4e9be4e071/661d9c281290c.image.jpg?resize=300%2C223" length="604733" type="image/jpeg" />
+        </item>
 
         <item>
             <title>Council approve stricter enforcement of STR resident requirement</title>
@@ -165,42 +204,6 @@
             <pubDate>Sat, 29 Aug 2026 12:30:00 -0600</pubDate>
             <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/e9dc1484-a919-41e6-a109-7804ef42080d</guid>
             <link>https://www.themountainmail.com/opinion/dear-editor-struna-family-gives-thanks/article_e9dc1484-a919-41e6-a109-7804ef42080d.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Dear Editor: Public Health seeks survey responses</title>
-            <description>Dear Editor:</description>
-            <pubDate>Sat, 29 Aug 2026 10:00:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/4c35dba8-1edd-4f36-aefb-94e09e6c4099</guid>
-            <link>https://www.themountainmail.com/opinion/dear-editor-public-health-seeks-survey-responses/article_4c35dba8-1edd-4f36-aefb-94e09e6c4099.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Dear Editor: Reader frustrated with music, volume at The Meadows</title>
-            <description>Dear Editor: Boom. Boom. Boom. Boom.</description>
-            <pubDate>Sat, 29 Aug 2026 09:09:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/2d60766a-71f3-46f1-b7b5-d332bffc6458</guid>
-            <link>https://www.themountainmail.com/opinion/dear-editor-reader-frustrated-with-music-volume-at-the-meadows/article_2d60766a-71f3-46f1-b7b5-d332bffc6458.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Dear Editor: Garfield residents give thanks to CCPH</title>
-            <description>Dear Editor: For the last few months about 20 residences on the north side of the village of Garfield have dealt with water quality issues. This is not new – we are often notified by the water provider (sometimes long&#8230;</description>
-            <pubDate>Sat, 29 Aug 2026 08:14:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/00a9c667-2606-4fdb-9dc7-f28ea15e3554</guid>
-            <link>https://www.themountainmail.com/opinion/dear-editor-garfield-residents-give-thanks-to-ccph/article_00a9c667-2606-4fdb-9dc7-f28ea15e3554.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Dear Editor: VFW is ‘calling all veterans’</title>
-            <description>Dear Editor: What is the American Legion? Anyone who has served in the military. Internationally we have over 1.6 million members, which makes us the largest wartime veterans organization in the world. There are over 13,000 posts worldwide.</description>
-            <pubDate>Fri, 28 Aug 2026 18:10:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/1bd448b9-f3d0-4a7a-819c-88c23e9418f3</guid>
-            <link>https://www.themountainmail.com/opinion/dear-editor-vfw-is-calling-all-veterans/article_1bd448b9-f3d0-4a7a-819c-88c23e9418f3.html</link>
             <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
         </item>
 
