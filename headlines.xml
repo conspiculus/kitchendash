@@ -15,6 +15,15 @@
         <ttl>30</ttl>
 
         <item>
+            <title>Dear Editor: Rails and Trails</title>
+            <description>Dear Editor:</description>
+            <pubDate>Sat, 05 Sep 2026 13:30:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/d288639f-89b5-4a31-8db7-b0d0c77d7202</guid>
+            <link>https://www.themountainmail.com/opinion/dear-editor-rails-and-trails/article_d288639f-89b5-4a31-8db7-b0d0c77d7202.html</link>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
+        </item>
+
+        <item>
             <title>Obituary: John Michael Read</title>
             <description>May 1, 1979 – Aug. 24, 2026</description>
             <pubDate>Sat, 05 Sep 2026 11:00:00 -0600</pubDate>
@@ -194,15 +203,6 @@
             <link>https://www.themountainmail.com/news/garna-honors-alan-robinson-raises-22-950-at-30th-anniversary-gala/article_46b962ca-902d-4b51-bdb5-b90edd8bc2fa.html</link>
             <dc:creator>Max R. Smith, Times Reporter</dc:creator>
             <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/a/d4/ad456ddc-f102-4daa-b148-87500791fabe/6a98952155cf6.image.jpg?resize=300%2C200" length="460045" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Community Calendar, Sept. 3-10</title>
-            <description>Thursday - Daily AA meetings – Visit AASalidaBVLeadville.com for information on daily Zoom meetings at several different times, some with passwords. 24-hour hotline: 888-333-9649. Some small group meetings are also reopening. Check website for details.</description>
-            <pubDate>Thu, 03 Sep 2026 06:32:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/88ec45df-d916-4580-9bca-522de4b0a856</guid>
-            <link>https://www.themountainmail.com/things_to_do/community-calendar-sept-3-10/article_88ec45df-d916-4580-9bca-522de4b0a856.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/1/54/154c4cbc-bf04-11ee-a27b-1f1dfebfa0fc/65b83ef5acb47.image.jpg?crop=1275%2C958%2C33%2C186&amp;resize=300%2C225&amp;order=crop%2Cresize" length="95787" type="image/jpeg" />
         </item>
 
     </channel>
