@@ -10,9 +10,29 @@
 		www.themountainmail.com - RSS Results
 		only for asset type(s) of article
 	</description>
-        <generator>TNCMS 1.95.3</generator>
+        <generator>TNCMS 1.96.0</generator>
         <docs>http://www.rssboard.org/rss-specification</docs>
         <ttl>30</ttl>
+
+        <item>
+            <title>Local country band Luckenbach plays covers of classics</title>
+            <description>New country band Luckenbach made its “second debut” Aug. 22 at Tres Litros Beer Co., as a local group of “friends and neighbors” who share a love of music.</description>
+            <pubDate>Tue, 08 Sep 2026 11:00:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/9d74d195-5843-4bee-b50e-b0e907b52d87</guid>
+            <link>https://www.themountainmail.com/news/local-country-band-luckenbach-plays-covers-of-classics/article_9d74d195-5843-4bee-b50e-b0e907b52d87.html</link>
+            <dc:creator>by Lijah Sampson, Mail Reporter</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/d/8c/d8cd3ac7-2ea1-43d0-ae95-d1478006b05b/6a99ee1506d9e.image.jpg?resize=300%2C200" length="331361" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Op-ed: Superintendent celebrates a ‘great start of the school year’</title>
+            <description>Dear Salida Schools Community,</description>
+            <pubDate>Tue, 08 Sep 2026 09:00:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/931e9db7-49e5-41a6-8870-f6fbe7550757</guid>
+            <link>https://www.themountainmail.com/news/education/op-ed-superintendent-celebrates-a-great-start-of-the-school-year/article_931e9db7-49e5-41a6-8870-f6fbe7550757.html</link>
+            <dc:creator>By Dr. David Blackburn, Special to The Mail</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/c/14/c140346c-730d-11e5-b5a5-834bc2c02407/561f54dea09b4.image.jpg?resize=300%2C347" length="44771" type="image/jpeg" />
+        </item>
 
         <item>
             <title>Green Week Sept. 21-26 focuses on sustainable living, energy saving</title>
@@ -181,24 +201,6 @@
             <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/83d88914-9c6c-45e2-9e9a-cc305dca73c4</guid>
             <link>https://www.themountainmail.com/obituaries/obituary-leslie-meyer-kilborn/article_83d88914-9c6c-45e2-9e9a-cc305dca73c4.html</link>
             <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/a/c2/ac2f9961-a3c5-45e1-9d2a-196e2965c3c3/6a99ba9bce140.image.jpg?crop=1273%2C955%2C2%2C289&amp;resize=300%2C225&amp;order=crop%2Cresize" length="409835" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Humanists’ Sunday Science to discuss wolves Sept. 6</title>
-            <description>“The Truth About Wolves” is the title of the Central Colorado Humanists Sunday Science program, which will start at 10 a.m. Sept. 6 at A Church, 419 D St.</description>
-            <pubDate>Fri, 04 Sep 2026 09:17:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/eeba2f06-127e-472a-8da2-cb4c5e64bf8e</guid>
-            <link>https://www.themountainmail.com/news/humanists-sunday-science-to-discuss-wolves-sept-6/article_eeba2f06-127e-472a-8da2-cb4c5e64bf8e.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/b/e3/be372282-dce7-11ef-9eb7-9f776db52482/6797e348b67cc.image.jpg?crop=505%2C379%2C157%2C45&amp;resize=300%2C225&amp;order=crop%2Cresize" length="68482" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>CCPH announces Embracing Aging Expo set for Sept. 11</title>
-            <description>Chaffee County Public Health announced the Embracing Aging Expo – “Transforming Well-being Through Community” will take place from 8:30 a.m.-3 p.m. Sept. 11 at Chaffee County Fairgrounds, 10165 CR 120 in Poncha Springs.</description>
-            <pubDate>Thu, 03 Sep 2026 16:00:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/029aaa64-e4e2-48d4-b55e-7fe208cb4b28</guid>
-            <link>https://www.themountainmail.com/news/ccph-announces-embracing-aging-expo-set-for-sept-11/article_029aaa64-e4e2-48d4-b55e-7fe208cb4b28.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/6/08/60884fdc-afff-11ee-b151-1735543015f5/659f0c5c5122d.image.jpg?resize=300%2C160" length="81908" type="image/jpeg" />
         </item>
 
     </channel>
