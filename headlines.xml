@@ -10,9 +10,57 @@
 		www.themountainmail.com - RSS Results
 		only for asset type(s) of article
 	</description>
-        <generator>TNCMS 1.96.2</generator>
+        <generator>TNCMS 1.96.3</generator>
         <docs>http://www.rssboard.org/rss-specification</docs>
         <ttl>30</ttl>
+
+        <item>
+            <title>Community discussion on 5H set for Oct. 20</title>
+            <description>A community discussion about Salida’s 5H zoning ballot measure will be at 6 p.m. Oct. 20, 2026, at the Rotary Scout Hut in Salida, 210 E. Sackett Ave.</description>
+            <pubDate>Mon, 19 Oct 2026 13:47:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/4ea0b74e-b148-4583-bb98-eb35387b2772</guid>
+            <link>https://www.themountainmail.com/news/community-discussion-on-5h-set-for-oct-20/article_4ea0b74e-b148-4583-bb98-eb35387b2772.html</link>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/9/d8/9d8b5a56-dfec-11ee-ac70-533ea199df73/65ef74c35dc53.image.jpg" length="17562" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>The Vault Salon evolves for apprenticeship, starting with Rickii Leewaye</title>
+            <description>The Vault Salon, in the basement of 130 W. Second St. in Salida, has recently expanded into apprenticeship with 18-year-old Rickii Leewaye, daughter of owner Tisha Leewaye.</description>
+            <pubDate>Mon, 19 Oct 2026 13:00:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/377e07d2-b423-4a1b-9c8b-7b958e64407e</guid>
+            <link>https://www.themountainmail.com/news/the-vault-salon-evolves-for-apprenticeship-starting-with-rickii-leewaye/article_377e07d2-b423-4a1b-9c8b-7b958e64407e.html</link>
+            <dc:creator>by Lijah Sampson, Mail Reporter</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/b/63/b63a1a13-dcb1-460f-8fc2-1f1a3cc58aed/6ad003b38fed9.image.jpg?crop=1164%2C873%2C7%2C543&amp;resize=300%2C225&amp;order=crop%2Cresize" length="175950" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>In cross-country SHS teams finish 5th, 7th</title>
+            <description>The Salida High School cross country team competed at their final regular season meet, the Eric Wolff Invitational 2026, Oct. 16.</description>
+            <pubDate>Mon, 19 Oct 2026 12:57:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/cbba29ec-943a-45aa-b7c1-c74f5d5c0413</guid>
+            <link>https://www.themountainmail.com/news/in-cross-country-shs-teams-finish-5th-7th/article_cbba29ec-943a-45aa-b7c1-c74f5d5c0413.html</link>
+            <dc:creator>Jack Sellner, Sports Desk</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/d/0f/d0f294c1-0079-426e-be5a-67fae3a0d576/6a85f7d6bccad.image.jpg?resize=300%2C172" length="608920" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>SHS volleyball continues to win, have two games this week</title>
+            <description>The Salida High School volleyball team hasn’t lost a set in their last three games after beating Woodland Park in straight sets during their only action last week.</description>
+            <pubDate>Mon, 19 Oct 2026 12:40:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/3b7f8fe4-ee28-45e1-9980-818da3f37d4d</guid>
+            <link>https://www.themountainmail.com/news/shs-volleyball-continues-to-win-have-two-games-this-week/article_3b7f8fe4-ee28-45e1-9980-818da3f37d4d.html</link>
+            <dc:creator>Jack Sellner, Sports Desk</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/7/86/786641ab-611c-4165-a963-95432b121f28/6a99cdb621acf.image.jpg?resize=300%2C200" length="349119" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Chaffee County Community Foundation launches Nonprofit Hub at Jane’s Place</title>
+            <description>Chaffee County Community Foundation announced it has launched the Nonprofit Hub at Jane’s Place, which it described in a press release as a new connection, collaboration and co-working space for nonprofit and government organizations serving the Upper Arkansas River Valley.</description>
+            <pubDate>Mon, 19 Oct 2026 09:00:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/f57a0dd3-9712-488b-bcfe-d38518d99a4c</guid>
+            <link>https://www.themountainmail.com/news/chaffee-county-community-foundation-launches-nonprofit-hub-at-jane-s-place/article_f57a0dd3-9712-488b-bcfe-d38518d99a4c.html</link>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/2/32/2322bdf4-b464-4b32-a589-08634eba10d4/6949a3f93dfb1.image.jpg?resize=300%2C200" length="208608" type="image/jpeg" />
+        </item>
 
         <item>
             <title>Colorado Farm to Table celebrates 30 years, new ED</title>
@@ -155,52 +203,6 @@
             <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/8a587ac4-87d9-451c-a98d-64c3509a33a5</guid>
             <link>https://www.themountainmail.com/opinion/dear-editor-fibark-in-the-green-river-museum-exhibit/article_8a587ac4-87d9-451c-a98d-64c3509a33a5.html</link>
             <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Dear Editor: Vote for Toby Taylor</title>
-            <description>Dear Editor: P.T. Wood has acknowledged he has been registered Republican, unaffiliated and Democrat. I really don't know how that is possible, frankly. The Ark Valley Voice quotes P.T.: “I’ve been a D and an R and a U,” said&#8230;</description>
-            <pubDate>Fri, 16 Oct 2026 09:15:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/89f1dc7a-6bd9-4a48-ab53-73536c30a58d</guid>
-            <link>https://www.themountainmail.com/opinion/dear-editor-vote-for-toby-taylor/article_89f1dc7a-6bd9-4a48-ab53-73536c30a58d.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Funding cuts deal 'gut punch' to Mountain Valley Transit</title>
-            <description>Mountain Valley Transit, which has provided Chaffee County and the surrounding area with free transportation for 30 years, announced service reductions on Oct. 12 due to decreased federal funding.</description>
-            <pubDate>Thu, 15 Oct 2026 16:30:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/fe4685fa-639f-4a40-b1fe-920bf94f0a85</guid>
-            <link>https://www.themountainmail.com/news/funding-cuts-deal-gut-punch-to-mountain-valley-transit/article_fe4685fa-639f-4a40-b1fe-920bf94f0a85.html</link>
-            <dc:creator>Laurel Swanz, Mail Reporter</dc:creator>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/5/70/570a3e5b-337b-456b-91af-672790ea180a/6ad1534e2cd61.image.jpg?resize=300%2C225" length="287315" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Dear Editor: The American economy and its capitalist-in-chief</title>
-            <description>Dear Editor: Per Theseus – legendary king of Athens:</description>
-            <pubDate>Thu, 15 Oct 2026 16:11:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/1b4ab3f2-b6f1-43b2-b1cc-7146cc62f45d</guid>
-            <link>https://www.themountainmail.com/opinion/dear-editor-the-american-economy-and-its-capitalist-in-chief/article_1b4ab3f2-b6f1-43b2-b1cc-7146cc62f45d.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Past tense, Oct. 15-22</title>
-            <description>140 Years Ago - Salida Weekly Mail, Oct. 1, 1886: The Longfellow mine, near Salida, is making quite a showing of good ore, lead and silver, better than it has done at any time since its first discovery.</description>
-            <pubDate>Thu, 15 Oct 2026 16:05:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/c4cecb4d-785e-4592-9bc4-5135704090e6</guid>
-            <link>https://www.themountainmail.com/news/past-tense-oct-15-22/article_c4cecb4d-785e-4592-9bc4-5135704090e6.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/2/c8/2c8a284e-21d9-11ef-9630-f7bcf4d79e57/665e0ef8a3193.image.jpg?resize=300%2C225" length="709050" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Salida Council for the Arts offers grants for arts projects</title>
-            <description>The Salida Council for the Arts invites all Salida artists and creatives to apply for the 2026 Community Grants for Artists of up to $500 each for funding for local arts and cultural-based projects.</description>
-            <pubDate>Thu, 15 Oct 2026 16:00:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/7c2300bc-5db6-4549-9211-c7a2920aea53</guid>
-            <link>https://www.themountainmail.com/news/salida-council-for-the-arts-offers-grants-for-arts-projects/article_7c2300bc-5db6-4549-9211-c7a2920aea53.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/df/3dfa60a0-82eb-4f13-a519-1153c91bc828/699883c61e136.image.jpg?resize=300%2C171" length="108643" type="image/jpeg" />
         </item>
 
     </channel>
