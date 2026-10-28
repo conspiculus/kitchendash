@@ -10,9 +10,66 @@
 		www.themountainmail.com - RSS Results
 		only for asset type(s) of article
 	</description>
-        <generator>TNCMS 1.96.3</generator>
+        <generator>TNCMS 1.96.4</generator>
         <docs>http://www.rssboard.org/rss-specification</docs>
         <ttl>30</ttl>
+
+        <item>
+            <title>Obituary: Frank ‘Kiko’ Maestas</title>
+            <description>Frank “Kiko” Maestas went to the Lord from his home near Buena Vista on Oct. 18, 2026.</description>
+            <pubDate>Wed, 28 Oct 2026 15:30:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/efdaa6fd-caaa-46b0-b266-989772dfee81</guid>
+            <link>https://www.themountainmail.com/obituaries/obituary-frank-kiko-maestas/article_efdaa6fd-caaa-46b0-b266-989772dfee81.html</link>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/4/90/490e1664-3d64-4f07-81c5-b4433e1879f9/6ae25cc0cbcce.image.jpg?resize=300%2C530" length="164422" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Poncha trustees honor Quintana, approve 2027 budget</title>
+            <description>The Poncha Springs Board of Trustees honored outgoing Mayor Pro-Tem Adrian Quintana for his 12½ years on the board and unanimously approved, with amendments, the 2027 budget during their Oct. 27 meeting.</description>
+            <pubDate>Wed, 28 Oct 2026 15:00:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/ab4192bc-93a4-4c06-a12e-d7db33971bdb</guid>
+            <link>https://www.themountainmail.com/news/poncha-trustees-honor-quintana-approve-2027-budget/article_ab4192bc-93a4-4c06-a12e-d7db33971bdb.html</link>
+            <dc:creator>By Cailey McDermott, Managing Editor</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/8/d3/8d300e68-325d-11ef-bc5f-b73db6124126/6679c4fcc848b.image.jpg?resize=300%2C216" length="293518" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Farmers Market season sees record number of vendors</title>
+            <description>This year’s Salida Farmers Market saw its biggest year ever in terms of number of vendors, totaling more than 100 with an average of 65 present each week. Last year had a total of around 80 and an average of&#8230;</description>
+            <pubDate>Wed, 28 Oct 2026 14:00:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/c62349fe-c57d-452d-bf63-5f39e50a8d51</guid>
+            <link>https://www.themountainmail.com/news/farmers-market-season-sees-record-number-of-vendors/article_c62349fe-c57d-452d-bf63-5f39e50a8d51.html</link>
+            <dc:creator>by Lijah Sampson, Mail Reporter</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/a/80/a80c3861-121d-41d7-b69d-3781a2f5f214/6ae244c8670dd.image.jpg?resize=300%2C200" length="446295" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Op-ed: Fall update from the new Salida Chamber of Commerce</title>
+            <description>It has been just over two months since we began rebuilding the Salida Chamber, and we want to share where things stand. We had hoped to move faster, but we’ve learned to be patient, and we’re proud of how far&#8230;</description>
+            <pubDate>Wed, 28 Oct 2026 13:30:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/afdc9cb6-2632-47c0-80f8-403bf76cec1a</guid>
+            <link>https://www.themountainmail.com/news/op-ed-fall-update-from-the-new-salida-chamber-of-commerce/article_afdc9cb6-2632-47c0-80f8-403bf76cec1a.html</link>
+            <dc:creator>By Vickie Sue Vigil, Guest Columnist</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/c/cb/ccb3c07e-bbcb-11ee-8f1a-33a68a3f040d/65b2d80fa0f54.image.png?resize=300%2C74" length="10515" type="image/png" />
+        </item>
+
+        <item>
+            <title>Registration opens for Nov. 27 Christmas Mountain Run</title>
+            <description>Registration is now open for the sixth annual Christmas Mountain 5-Mile and 1-Mile Runs, which will start at 10 a.m. Nov. 27 in Salida.</description>
+            <pubDate>Wed, 28 Oct 2026 11:00:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/3205d932-154a-428c-82b3-e460f383f84a</guid>
+            <link>https://www.themountainmail.com/news/registration-opens-for-nov-27-christmas-mountain-run/article_3205d932-154a-428c-82b3-e460f383f84a.html</link>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/a/d9/ad95ce14-c736-4f77-b2f9-022df72cc12c/692e0a2e6284a.image.jpg?resize=300%2C231" length="402237" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Holiday Park organizers announce 2026 schedule</title>
+            <description>Each holiday season Salida’s Riverside Park is transformed into Holiday Park, with decorated Christmas trees lining the walkways – all adopted and decorated by local families, businesses, organizations, clubs and individuals.</description>
+            <pubDate>Wed, 28 Oct 2026 09:00:00 -0600</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/0528f3f0-d922-4d90-a312-9d4059647f40</guid>
+            <link>https://www.themountainmail.com/news/holiday-park-organizers-announce-2026-schedule/article_0528f3f0-d922-4d90-a312-9d4059647f40.html</link>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/2/87/287c196c-6b8f-11ed-9adb-67c2402f2f34/637ebb4310fb1.image.jpg?resize=300%2C230" length="484805" type="image/jpeg" />
+        </item>
 
         <item>
             <title>Things to do in Salida</title>
@@ -146,62 +203,6 @@
             <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/12018534-75c8-46e0-9b52-00f8ed94b803</guid>
             <link>https://www.themountainmail.com/obituaries/obituary-richard-dick-hal-heitman/article_12018534-75c8-46e0-9b52-00f8ed94b803.html</link>
             <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/d/e2/de2b67ed-1ebe-4929-bfa6-60ac74bc6f1c/6adbb14bb0171.image.jpg?resize=300%2C375" length="557539" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Dear Editor: Vote ‘yes’ for 87 and NN; ‘no’ on others</title>
-            <description>Dear Editor:</description>
-            <pubDate>Mon, 26 Oct 2026 11:15:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/500860fc-c502-414e-a6d3-61dc2de8338c</guid>
-            <link>https://www.themountainmail.com/opinion/dear-editor-vote-yes-for-87-and-nn-no-on-others/article_500860fc-c502-414e-a6d3-61dc2de8338c.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Ice Rink for Chaffee County celebrates refrigerated ice, camps</title>
-            <description>Ice Rink for Chaffee County, a nonprofit organization dedicated to bringing a skating rink to Chaffee, has made a breakthrough this year with introducing a refrigeration system to their seasonal rink, and celebrated Oct. 22 at High Side! Bar &amp;&#8230;</description>
-            <pubDate>Mon, 26 Oct 2026 09:33:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/36cc0d3e-1569-4215-bd5e-26558cf59d1e</guid>
-            <link>https://www.themountainmail.com/news/ice-rink-for-chaffee-county-celebrates-refrigerated-ice-camps/article_36cc0d3e-1569-4215-bd5e-26558cf59d1e.html</link>
-            <dc:creator>Lijah Sampson, Mail Reporter</dc:creator>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/0/04/00424439-618a-4751-a8da-133e86a4450f/6adf733142a66.image.jpg?resize=300%2C200" length="253698" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Sunday Science talk to focus on aircraft safety</title>
-            <description>“Aircraft Design and Operation for Safety” is the title of the next Sunday Science talk presented by the Central Colorado Humanists at 10 a.m. Nov. 1 at A Church, 419 D St.</description>
-            <pubDate>Mon, 26 Oct 2026 09:00:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/c7df9fce-5a19-4726-8f0c-54eab2ca07e8</guid>
-            <link>https://www.themountainmail.com/news/sunday-science-talk-to-focus-on-aircraft-safety/article_c7df9fce-5a19-4726-8f0c-54eab2ca07e8.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/e/18/e181c28e-eb24-11ee-a730-6fdede3bea81/660247eab0c29.image.jpg" length="8367" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Dear Editor: Local grid is not ‘strong and reliable’</title>
-            <description>Dear Editor:</description>
-            <pubDate>Sun, 25 Oct 2026 16:45:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/0ca99d4e-13d1-4fd5-a136-3b37b5a08f44</guid>
-            <link>https://www.themountainmail.com/opinion/dear-editor-local-grid-is-not-strong-and-reliable/article_0ca99d4e-13d1-4fd5-a136-3b37b5a08f44.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Dear Editor: Open letter to ‘everyone seeking the truth’</title>
-            <description>Dear Editor:</description>
-            <pubDate>Sun, 25 Oct 2026 15:45:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/b6ee3e20-d88d-457d-8c18-94a697307cb3</guid>
-            <link>https://www.themountainmail.com/opinion/dear-editor-open-letter-to-everyone-seeking-the-truth/article_b6ee3e20-d88d-457d-8c18-94a697307cb3.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Op-ed: Agnostic Apologist- The virgin birth and immaculate conception</title>
-            <description>The Christian Post reports that in a recent survey, only 49% (or about 171 million) Americans believe Jesus was born of a virgin, or from an immaculate conception, down from 66% in 2017.</description>
-            <pubDate>Sun, 25 Oct 2026 15:30:00 -0600</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/a310ef9c-e85c-4b51-b015-26f9df6bd439</guid>
-            <link>https://www.themountainmail.com/opinion/op-ed-agnostic-apologist--the-virgin-birth-and-immaculate-conception/article_a310ef9c-e85c-4b51-b015-26f9df6bd439.html</link>
-            <dc:creator>by John Mattingly, Special to The Mail</dc:creator>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/0/c1/0c1e062d-c7b6-468c-aa04-e7da1fc13233/691250233ad8a.image.jpg?resize=300%2C300" length="249749" type="image/jpeg" />
         </item>
 
     </channel>
