@@ -119,8 +119,9 @@ html, body {
 .lo { color: var(--lo); font-weight: 500; }
 .hilo .sep { color: var(--mute-2); margin: 0 6px; }
 
-/* ── Arkansas River flow ────────────────────────── */
-.river {
+/* ── Seasonal stat: Monarch new snow (winter) / Arkansas River flow
+      (spring–fall). Same geometry either way; see PANEL_MODE in app.js. ── */
+.river, .snow {
   display: flex;
   flex-direction: column;
   gap: 3px;
@@ -128,21 +129,21 @@ html, body {
   border-top: 1px solid var(--line);
 }
 
-.river-head {
+.river-head, .snow-head {
   font-size: 11px;
   letter-spacing: 0.18em;
   color: var(--mute);
   font-weight: 600;
 }
 
-.river-now {
+.river-now, .snow-now {
   display: flex;
   align-items: baseline;
   gap: 12px;
 }
 
-/* Match .temp exactly (same size/weight), recolored to the cool "water" blue. */
-.river-flow {
+/* Match .temp exactly (same size/weight), recolored to the cool water/ice blue. */
+.river-flow, .snow-depth {
   font-size: 68px;
   font-weight: 200;
   line-height: 0.95;
@@ -151,10 +152,15 @@ html, body {
   font-variant-numeric: tabular-nums;
 }
 
-.river-unit {
+.river-unit, .snow-unit {
   font-size: 16px;
   color: var(--ink-2);
 }
+
+/* `display: flex` above is an author rule, so it beats the UA stylesheet's
+   [hidden] { display: none } no matter the specificity. Without this, the
+   inactive seasonal block renders anyway and the panel shows both numbers. */
+.river[hidden], .snow[hidden] { display: none; }
 
 .metrics {
   padding-top: 12px;

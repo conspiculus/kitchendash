@@ -45,6 +45,33 @@
   const WX_INTERVAL_MS = 15 * 60 * 1000;
   const WX_RETRY_MS = 60 * 1000;
 
+  // ── Seasonal stat slot ──────────────────────────────────────────────
+  // The second big number in the current-conditions panel is seasonal:
+  //   'snow'  → new snow in the last 24h at Monarch Mountain  (winter)
+  //   'river' → Arkansas River discharge at Nathrop            (spring–fall)
+  // Flip this one constant to switch; both code paths and both DOM blocks
+  // stay in place. Nothing else needs editing.
+  const PANEL_MODE = 'snow';
+
+  // Monarch Mountain (Monarch Pass, ~38.512 / -106.333). Open-Meteo snaps
+  // this to its 10,840 ft grid cell, which is about the ski area's base.
+  // Modeled snowfall, not a patrol report — Monarch publishes no open feed,
+  // and the nearest observed gauge (Porphyry Creek SNOTEL #701) reports
+  // settled depth, which drops on warm days even after it snows.
+  const SNOW_LAT = 38.5121;
+  const SNOW_LON = -106.3325;
+  // timeformat=unixtime (and no timezone param, so GMT) keeps this immune to
+  // the system-timezone trap documented on fmtClock below: we compare real
+  // epoch seconds instead of parsing tz-less local strings. past_days=2 is
+  // margin — a 24h window only ever reaches one day back.
+  const SNOW_URL =
+    'https://api.open-meteo.com/v1/forecast' +
+    `?latitude=${SNOW_LAT}&longitude=${SNOW_LON}` +
+    '&hourly=snowfall&precipitation_unit=inch&timeformat=unixtime' +
+    '&past_days=2&forecast_days=1';
+  const SNOW_INTERVAL_MS = 15 * 60 * 1000;
+  const SNOW_RETRY_MS = 60 * 1000;
+
   // Arkansas River near Nathrop (USGS 07091200). riverflow.json is mirrored
   // into the repo by the "Update river flow" GH Action every 30 min; the gauge
   // itself reports every 15 min, so refetch the same-origin mirror on that beat.
@@ -122,7 +149,8 @@
     stamp: $('wx-stamp'),
     cam: $('cam'), camTime: $('cam-time'), camStale: $('cam-stale'),
     days: $('days'),
-    riverFlow: $('river-flow'),
+    riverFlow: $('river-flow'), riverBlock: $('river-block'),
+    snowDepth: $('snow-depth'), snowBlock: $('snow-block'),
   };
 
   /* ── Helpers ─────────────────────────────────────────────────────── */
@@ -393,6 +421,54 @@
     el.days.replaceChildren(frag);
   }
 
+  /* ── Monarch new snow (24h) ──────────────────────────────────────── */
+  let snowRetryHandle = null;
+
+  async function fetchSnow() {
+    if (snowRetryHandle) { clearTimeout(snowRetryHandle); snowRetryHandle = null; }
+    try {
+      const res = await fetch(SNOW_URL, { cache: 'no-store' });
+      if (!res.ok) throw new Error(`HTTP ${res.status}`);
+      renderSnow(await res.json());
+    } catch (err) {
+      // Keep last-good on screen, same contract as the weather fetch.
+      console.warn('snow fetch failed', err);
+      snowRetryHandle = setTimeout(fetchSnow, SNOW_RETRY_MS);
+    }
+  }
+
+  function renderSnow(data) {
+    const h = data && data.hourly;
+    if (!h || !Array.isArray(h.time) || !Array.isArray(h.snowfall)) return;
+    // Open-Meteo hourly precipitation is a *preceding-hour* sum, so the value
+    // stamped 12:00 covers 11:00–12:00. Trailing 24h is therefore every bucket
+    // stamped after (now - 24h) and not later than the current hour.
+    const nowSec = Math.floor(Date.now() / 1000);
+    const hourSec = nowSec - (nowSec % 3600);
+    const cutoff = hourSec - 24 * 3600;
+    let total = 0;
+    let found = false;
+    for (let i = 0; i < h.time.length; i++) {
+      const t = h.time[i];
+      if (t <= cutoff || t > hourSec) continue;
+      const v = h.snowfall[i];
+      if (v == null || Number.isNaN(v)) continue;
+      total += v;
+      found = true;
+    }
+    if (!found) return;   // nothing in range: leave last-good in place
+    el.snowDepth.textContent = fmtSnow(total);
+  }
+
+  // Trace amounts read better as a decimal; a real dump reads better rounded.
+  // Round to a tenth first so 9.96 shows as "10", not "10.0".
+  function fmtSnow(n) {
+    const r = Math.round(n * 10) / 10;
+    if (r < 0.05) return '0';
+    if (r < 10) return r.toFixed(1);
+    return String(Math.round(r));
+  }
+
   /* ── River flow ──────────────────────────────────────────────────── */
   let riverRetryHandle = null;
 
@@ -470,24 +546,34 @@
     track.innerHTML = html + html;
   }
 
+  /* ── Seasonal slot wiring ────────────────────────────────────────── */
+  // One source of truth for the whole slot: which block is visible, which
+  // feed gets polled, and which gets refetched on wake. Only the active
+  // path ever runs a timer, so the dormant one costs nothing.
+  const snowMode = PANEL_MODE === 'snow';
+  const fetchSeasonal = snowMode ? fetchSnow : fetchRiver;
+  const SEASONAL_INTERVAL_MS = snowMode ? SNOW_INTERVAL_MS : RIVER_INTERVAL_MS;
+  el.snowBlock.hidden = !snowMode;
+  el.riverBlock.hidden = snowMode;
+
   /* ── Boot ────────────────────────────────────────────────────────── */
   startCam();
   camTick();
   fetchWeather();
-  fetchRiver();
+  fetchSeasonal();
   loadHeadlines();
   tickerNightTick();
 
   setInterval(camTick, 5_000);
   setInterval(fetchWeather, WX_INTERVAL_MS);
-  setInterval(fetchRiver, RIVER_INTERVAL_MS);
+  setInterval(fetchSeasonal, SEASONAL_INTERVAL_MS);
   setInterval(loadHeadlines, RSS_INTERVAL_MS);
   setInterval(tickerNightTick, TICKER_NIGHT_CHECK_MS);
 
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) return;
     fetchWeather();
-    fetchRiver();
+    fetchSeasonal();
     loadHeadlines();
     // After a long sleep the stream often won't resume on its own.
     if (el.cam.paused) el.cam.play().catch(() => {});

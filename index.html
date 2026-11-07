@@ -32,7 +32,19 @@
         </div>
       </div>
 
-      <div class="river" aria-label="Arkansas River flow">
+      <!-- Seasonal slot: exactly one of .snow / .river is shown, chosen by
+           PANEL_MODE in app.js. The `hidden` attrs below only avoid a flash
+           before app.js runs; app.js sets both on boot, so flipping
+           PANEL_MODE is the whole switch. -->
+      <div class="snow" id="snow-block" aria-label="New snow at Monarch Mountain">
+        <header class="snow-head">MONARCH &middot; NEW SNOW 24H</header>
+        <div class="snow-now">
+          <span class="snow-depth" id="snow-depth">&mdash;</span>
+          <span class="snow-unit">in</span>
+        </div>
+      </div>
+
+      <div class="river" id="river-block" aria-label="Arkansas River flow" hidden>
         <header class="river-head">ARKANSAS RIVER</header>
         <div class="river-now">
           <span class="river-flow" id="river-flow">&mdash;</span>
