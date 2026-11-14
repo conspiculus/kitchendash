@@ -10,9 +10,46 @@
 		www.themountainmail.com - RSS Results
 		only for asset type(s) of article
 	</description>
-        <generator>TNCMS 1.97.0</generator>
+        <generator>TNCMS 1.97.1</generator>
         <docs>http://www.rssboard.org/rss-specification</docs>
         <ttl>30</ttl>
+
+        <item>
+            <title>Red Cross looks to recruit volunteers in the Arkansas Valley</title>
+            <description>The American Red Cross is looking to expand its volunteer presence in Chaffee County, hoping to build a network of local residents capable of responding to emergencies in their own communities rather than relying on volunteers traveling from other parts&#8230;</description>
+            <pubDate>Fri, 13 Nov 2026 14:34:00 -0700</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/33a0947a-df47-5149-8d9e-e9fee8104442</guid>
+            <link>https://www.themountainmail.com/news/red-cross-looks-to-recruit-volunteers-in-the-arkansas-valley/article_33a0947a-df47-5149-8d9e-e9fee8104442.html</link>
+            <dc:creator>Max R. Smith, Times Reporter</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/e/02/e021c07f-5ec9-5422-9eac-9801030ece14/6af5def122bba.preview-300.jpg" length="12334" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Dear Editor: Reader urges city to fund Places to Age</title>
+            <description>Dear Editor:</description>
+            <pubDate>Fri, 13 Nov 2026 14:30:00 -0700</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/dc0063ab-1c33-4703-b334-46177481a227</guid>
+            <link>https://www.themountainmail.com/opinion/dear-editor-reader-urges-city-to-fund-places-to-age/article_dc0063ab-1c33-4703-b334-46177481a227.html</link>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Dear Editor: City budget priorities</title>
+            <description>Dear Editor:</description>
+            <pubDate>Fri, 13 Nov 2026 13:30:00 -0700</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/eb74670a-31c0-4ac9-b490-7f5dd37fcfeb</guid>
+            <link>https://www.themountainmail.com/opinion/dear-editor-city-budget-priorities/article_eb74670a-31c0-4ac9-b490-7f5dd37fcfeb.html</link>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Celebration of Life for Bob Campbell</title>
+            <description>A Celebration of Life for Bob Campbell will be held at 1 p.m. Nov. 21, 2026 at the Salida Methodist Church, 228 E 4th St.</description>
+            <pubDate>Fri, 13 Nov 2026 13:11:00 -0700</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/e7d8846b-5d2a-4f1d-8521-0212d02d73af</guid>
+            <link>https://www.themountainmail.com/obituaries/memorials/celebration-of-life-for-bob-campbell/article_e7d8846b-5d2a-4f1d-8521-0212d02d73af.html</link>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/27/32720b22-c8b6-4172-9786-a20e395d471d/6af76f5454ae3.image.jpg?crop=1096%2C822%2C19%2C21&amp;resize=300%2C225&amp;order=crop%2Cresize" length="235153" type="image/jpeg" />
+        </item>
 
         <item>
             <title>Kickoff to Winter, organized under new leadership, promotes new winter activities</title>
@@ -40,7 +77,7 @@
             <pubDate>Thu, 12 Nov 2026 14:00:00 -0700</pubDate>
             <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/21873624-8558-51aa-b47e-56c3eb06da96</guid>
             <link>https://www.themountainmail.com/news/ccedc-partners-with-startup-colorado-for-ascent-accelerator/article_21873624-8558-51aa-b47e-56c3eb06da96.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/f/45/f4584690-dd95-11ee-8be3-8f39439bce56/65eb886b73a21.image.png" length="3596" type="image/png" />
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/8/f6/8f68da4c-223b-5f19-b5a2-32efacc54db7/6af770981d96f.image.png" length="4689" type="image/png" />
         </item>
 
         <item>
@@ -163,44 +200,6 @@
             <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/9da308f3-3144-439a-863f-041135e2cd47</guid>
             <link>https://www.themountainmail.com/news/el-pomar-seeks-fellowship-and-intern-applicants/article_9da308f3-3144-439a-863f-041135e2cd47.html</link>
             <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/7/cd/7cd38066-9f66-11ee-af94-9b7626be72d9/658333f074ec1.image.png?resize=300%2C300" length="306445" type="image/png" />
-        </item>
-
-        <item>
-            <title>Fashion Show will bring the runway to Salida</title>
-            <description>Designers will have the opportunity to display their work at the Salida Fashion Show on Nov. 13 at Salida SteamPlant, 220 W. Sackett Ave.</description>
-            <pubDate>Wed, 11 Nov 2026 11:00:00 -0700</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/70f2222c-aa65-4e98-970c-2d954adf64e4</guid>
-            <link>https://www.themountainmail.com/news/fashion-show-will-bring-the-runway-to-salida/article_70f2222c-aa65-4e98-970c-2d954adf64e4.html</link>
-            <dc:creator>Laurel Swanz, Mail Reporter</dc:creator>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/c/42/c4223f63-09f3-439c-a225-1bdd884bd8d5/6af4aa28efff5.image.png?resize=300%2C254" length="715288" type="image/png" />
-        </item>
-
-        <item>
-            <title>Dear Editor: CO2 levels in our atmosphere</title>
-            <description>Dear Editor:</description>
-            <pubDate>Wed, 11 Nov 2026 10:30:00 -0700</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/7f25b362-5506-4023-97d8-9dce79cf27ad</guid>
-            <link>https://www.themountainmail.com/opinion/dear-editor-co2-levels-in-our-atmosphere/article_7f25b362-5506-4023-97d8-9dce79cf27ad.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Dear Editor: Reader has concerns about Crestone intersection</title>
-            <description>Dear Editor:</description>
-            <pubDate>Wed, 11 Nov 2026 09:30:00 -0700</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/663ea0a9-7834-4f69-9fca-8987b339cf06</guid>
-            <link>https://www.themountainmail.com/opinion/dear-editor-reader-has-concerns-about-crestone-intersection/article_663ea0a9-7834-4f69-9fca-8987b339cf06.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Meadows cancels events following county permitting hearings</title>
-            <description>Editor's Note: This story was updated at 1:45 p.m. Nov. 11.</description>
-            <pubDate>Tue, 10 Nov 2026 17:12:00 -0700</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/2b150214-c003-58b3-97c6-bcce2c37b440</guid>
-            <link>https://www.themountainmail.com/news/meadows-cancels-events-following-county-permitting-hearings/article_2b150214-c003-58b3-97c6-bcce2c37b440.html</link>
-            <dc:creator>Josh Pike, OMG Reporter</dc:creator>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/8/5d/85d44089-0a1b-53b7-919a-d4c0df303fd2/6af3b35751460.image.jpg?resize=300%2C223" length="620451" type="image/jpeg" />
         </item>
 
     </channel>
