@@ -10,9 +10,123 @@
 		www.themountainmail.com - RSS Results
 		only for asset type(s) of article
 	</description>
-        <generator>TNCMS 1.97.1</generator>
+        <generator>TNCMS 1.97.2</generator>
         <docs>http://www.rssboard.org/rss-specification</docs>
         <ttl>30</ttl>
+
+        <item>
+            <title>Hospital board approves 2027 budget</title>
+            <description>The Heart of the Rockies Regional Medical Center Board of Directors approved the hospital’s 2027 budget at a Nov. 24 work session, following a public hearing.</description>
+            <pubDate>Wed, 25 Nov 2026 16:18:00 -0700</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/aeedd827-9fe6-4c33-afd9-dcae29fe8b4c</guid>
+            <link>https://www.themountainmail.com/news/hospital-board-approves-2027-budget/article_aeedd827-9fe6-4c33-afd9-dcae29fe8b4c.html</link>
+            <dc:creator>Max R. Smith, Times Reporter</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/8/d8/8d87adf1-c4de-41fb-aa06-138ae6a64661/686ea3e4a22e9.image.jpg?resize=300%2C169" length="290448" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Dear Editor: Director gives thanks for ‘Shrek’ success</title>
+            <description>Dear Editor:</description>
+            <pubDate>Wed, 25 Nov 2026 14:30:00 -0700</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/42379a94-85a3-43b2-9c71-409d8eff84ef</guid>
+            <link>https://www.themountainmail.com/opinion/dear-editor-director-gives-thanks-for-shrek-success/article_42379a94-85a3-43b2-9c71-409d8eff84ef.html</link>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Sventastik to offer 10 performances of ‘Elf Jr.’ to celebrate holiday spirit</title>
+            <description>For the first time in Sventastik Productions’ history, this winter season the theater company will offer a total 10 performances of a musical, “Elf the Musical Jr.” The musical is 60 minutes long with about 40 cast members ages 6-16&#8230;</description>
+            <pubDate>Wed, 25 Nov 2026 12:15:00 -0700</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/cf3e8654-a2c4-4172-adf0-0ec7cb80edb1</guid>
+            <link>https://www.themountainmail.com/news/sventastik-to-offer-10-performances-of-elf-jr-to-celebrate-holiday-spirit/article_cf3e8654-a2c4-4172-adf0-0ec7cb80edb1.html</link>
+            <dc:creator>Lijah Sampson, Mail Reporter</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/d/32/d32227b1-5831-49e0-a1a0-4669876c8a23/6b06feffce756.image.jpg?resize=300%2C225" length="281525" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Monarch to open Saturday</title>
+            <description>Monarch Mountain will open for the season at 9 a.m. Nov. 28, welcoming skiers and riders back to the Continental Divide for its 87th season.</description>
+            <pubDate>Wed, 25 Nov 2026 11:13:00 -0700</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/7a96a7f5-0b7c-4eb3-b622-da7b1bfecba6</guid>
+            <link>https://www.themountainmail.com/news/monarch-to-open-saturday/article_7a96a7f5-0b7c-4eb3-b622-da7b1bfecba6.html</link>
+            <dc:creator>Cailey McDermott, Managing Editor</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/1/c0/1c0f6168-ed16-4fbc-aad6-cbb8a5f6face/6b0725fc8a7b7.image.jpg?resize=300%2C225" length="605702" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Salvation Army seeks volunteer bell ringers</title>
+            <description>The Chaffee County Salvation Army announced in a press release that it needs teams of volunteers from charitable and other organizations to participate in its annual kettle bell-ringing effort to generate funds to help local residents in need.</description>
+            <pubDate>Wed, 25 Nov 2026 11:00:00 -0700</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/33511a03-f1dd-4f28-b6c3-ed89a6cf7303</guid>
+            <link>https://www.themountainmail.com/news/salvation-army-seeks-volunteer-bell-ringers/article_33511a03-f1dd-4f28-b6c3-ed89a6cf7303.html</link>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/b/e8/be835a56-6be9-11e3-9dfe-001a4bcf6878/52b85b965c5f5.image.jpg?resize=300%2C236" length="81766" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Schmid celebrates Thanksgiving with book launch Nov. 28</title>
+            <description>Harry Schmid, 84, a German immigrant, is celebrating Thanksgiving this year with the launch of his book, “One Immigrant’s Odyssey,” from 2 to 4 p.m. Nov. 28 at the Salida Community Center, 305 F St.</description>
+            <pubDate>Wed, 25 Nov 2026 10:30:00 -0700</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/ada11cc2-df20-4036-b8f2-1f64d66e7527</guid>
+            <link>https://www.themountainmail.com/news/schmid-celebrates-thanksgiving-with-book-launch-nov-28/article_ada11cc2-df20-4036-b8f2-1f64d66e7527.html</link>
+            <dc:creator>Arlene Shovald, Special to The Mail</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/e/8b/e8b488d3-0394-4eb5-b9aa-1ef687f1c097/6b0620cd0eeab.image.jpg?crop=914%2C687%2C82%2C67&amp;resize=300%2C225&amp;order=crop%2Cresize" length="227878" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Healthbeat: Gather, gobble and keep the holidays healthy</title>
+            <description>The turkey is the centerpiece, the pie is a family favorite, and everyone has an opinion about the stuffing. As Coloradans prepare to share holiday meals, the Colorado Department of Public Health and Environment offers a recipe for safer celebrations:&#8230;</description>
+            <pubDate>Wed, 25 Nov 2026 09:00:00 -0700</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/0c2fe875-e6d3-4707-9ac5-12e79714c6b1</guid>
+            <link>https://www.themountainmail.com/news/healthbeat-gather-gobble-and-keep-the-holidays-healthy/article_0c2fe875-e6d3-4707-9ac5-12e79714c6b1.html</link>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/d/f7/df7f3da7-a1a6-4b84-8eb8-5e149f856b3d/6927529d00982.image.jpg?resize=300%2C200" length="313892" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Things to do in Salida</title>
+            <description>Thurs., Nov. 26 - Buena Vista - 10 a.m. – Turkey Trot 5K and Family Fun Run, starting and ending at 203 S. Railroad St., feature a mostly flat, stroller-friendly course and prizes for top 5K finishers. Free Fun Run&#8230;</description>
+            <pubDate>Tue, 24 Nov 2026 17:30:00 -0700</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/f846d8fa-5842-4e02-a37b-52a9e99c7e96</guid>
+            <link>https://www.themountainmail.com/things_to_do/things-to-do-in-salida/article_f846d8fa-5842-4e02-a37b-52a9e99c7e96.html</link>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/7/aa/7aaa6d23-8064-4888-bfe5-f29627580061/692e15465a5dd.image.jpg?resize=300%2C200" length="354801" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Obituary: Jeanette Regas</title>
+            <description>Jeanette Regas died Nov. 19, 2026.</description>
+            <pubDate>Tue, 24 Nov 2026 15:30:00 -0700</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/e7142525-5763-41bc-9cdf-8bbb3b7dc615</guid>
+            <link>https://www.themountainmail.com/obituaries/obituary-jeanette-regas/article_e7142525-5763-41bc-9cdf-8bbb3b7dc615.html</link>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/7/33/73372edb-00f8-4b8c-ba04-46e47aae7bed/6b05fefade12b.image.jpg?resize=300%2C246" length="210300" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Backcountry Education series returns with more interaction, new info</title>
+            <description>Buena Vista Mountain Adventures, in partnership with Salida Mountain Sports and The Trailhead, will bring back their free Backcountry Education series in both Buena Vista and Salida, with a new class this year, Backcountry Emergency Basics.</description>
+            <pubDate>Tue, 24 Nov 2026 15:15:00 -0700</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/335bc9ff-ef41-5fd6-9045-8c91d07ba0cd</guid>
+            <link>https://www.themountainmail.com/news/backcountry-education-series-returns-with-more-interaction-new-info/article_335bc9ff-ef41-5fd6-9045-8c91d07ba0cd.html</link>
+            <dc:creator>Lijah Sampson, Mail Reporter</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/1/6d/16d1897a-cc4d-55da-a3c2-6b5be7c5a753/6b06074a79cd7.image.jpg?resize=300%2C200" length="45610" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Dear Editor: Fundraiser organizer thanks sponsors, donors</title>
+            <description>Editor’s Note: The recent letter from Laura Marcello was from the 2025 fundraiser. Editor made the error.</description>
+            <pubDate>Tue, 24 Nov 2026 15:00:00 -0700</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/3cb64733-6391-4928-a8c1-ba69b0d02335</guid>
+            <link>https://www.themountainmail.com/opinion/dear-editor-fundraiser-organizer-thanks-sponsors-donors/article_3cb64733-6391-4928-a8c1-ba69b0d02335.html</link>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
+        </item>
+
+        <item>
+            <title>Volunteers keep Salida’s free Thanksgiving tradition alive</title>
+            <description>The Salida Community Center’s annual Thanksgiving feast returns to 305 F St. from 11a.m. to 1p.m. Nov. 26.</description>
+            <pubDate>Tue, 24 Nov 2026 14:30:00 -0700</pubDate>
+            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/7dd48e3f-0503-497e-b188-931a4510a827</guid>
+            <link>https://www.themountainmail.com/news/volunteers-keep-salida-s-free-thanksgiving-tradition-alive/article_7dd48e3f-0503-497e-b188-931a4510a827.html</link>
+            <dc:creator>Laurel Swanz, Mail Reporter</dc:creator>
+            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/2/2f/22ff0c24-6c4d-11ed-a97d-7b4d25f61193/637ff9cf5c68f.image.jpg?resize=300%2C223" length="215958" type="image/jpeg" />
+        </item>
 
         <item>
             <title>Lifesaving Chaffee County sergeant awarded for ‘distinguished service’ in Washington</title>
@@ -90,119 +204,6 @@
             <link>https://www.themountainmail.com/opinion/church-column-whats-right-with-the-world/article_e3400dbc-4e92-4c9b-8f25-b1c580a6edd9.html</link>
             <dc:creator>Matthew Molesky, Church Columnist</dc:creator>
             <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/0b/30bb4576-08b9-11ef-aa97-d7b40b383b04/6633e7d09fb15.image.jpg?resize=300%2C469" length="403669" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Dear Editor: ‘Our actions affect our environment’</title>
-            <description>Dear Editor:</description>
-            <pubDate>Sun, 22 Nov 2026 14:00:00 -0700</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/4a7559c0-00d6-417f-9b45-698c28fde6fb</guid>
-            <link>https://www.themountainmail.com/opinion/dear-editor-our-actions-affect-our-environment/article_4a7559c0-00d6-417f-9b45-698c28fde6fb.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Op-ed: Agnostic Apologist Ask an atheist: What happened to Armistice Day?</title>
-            <description>Armistice Day became a casualty of war.</description>
-            <pubDate>Sun, 22 Nov 2026 12:15:00 -0700</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/52589e1c-25ad-4a46-8837-c15afa7a963c</guid>
-            <link>https://www.themountainmail.com/opinion/op-ed-agnostic-apologist-ask-an-atheist-what-happened-to-armistice-day/article_52589e1c-25ad-4a46-8837-c15afa7a963c.html</link>
-            <dc:creator>By John Mattingly, Special to The Mail</dc:creator>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/0/c1/0c1e062d-c7b6-468c-aa04-e7da1fc13233/691250233ad8a.image.jpg?resize=300%2C300" length="249749" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Accidental Angler: Closing the loop</title>
-            <description>We wait until morning sun warms the tent before stirring. The first order of the day is to boil water for coffee and tea, then sit in the sun and contemplate the day. In the distance a snow-covered peak is&#8230;</description>
-            <pubDate>Sun, 22 Nov 2026 10:00:00 -0700</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/f37fd283-9b03-466d-9d23-0a99531f0006</guid>
-            <link>https://www.themountainmail.com/opinion/accidental-angler-closing-the-loop/article_f37fd283-9b03-466d-9d23-0a99531f0006.html</link>
-            <dc:creator>Hayden Mellsop, Special to the Mail</dc:creator>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/e/97/e9792c8c-69df-11ee-9ffd-d713d8d84007/652966ec0ff7c.image.jpg?resize=300%2C200" length="287034" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>AVHS: Good health for your pets</title>
-            <description>“Here’s to good health” for all your pets every month of every year. It is such a wonderful wish that October was proclaimed to be National Pet Wellness Month.</description>
-            <pubDate>Sat, 21 Nov 2026 13:30:00 -0700</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/f8a175d8-3e15-4134-b15d-56c673609b4f</guid>
-            <link>https://www.themountainmail.com/opinion/avhs-good-health-for-your-pets/article_f8a175d8-3e15-4134-b15d-56c673609b4f.html</link>
-            <dc:creator>Judy Hamontre, Ark-Valley Humane Society</dc:creator>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/6/1a/61a3866d-9173-4f2b-b683-bb2fe5ecabce/68dec52739848.image.png?resize=300%2C262" length="462394" type="image/png" />
-        </item>
-
-        <item>
-            <title>Dear Editor: Election results leave many questions</title>
-            <description>Dear Editor:</description>
-            <pubDate>Sat, 21 Nov 2026 13:00:00 -0700</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/31171f21-af1b-4777-8675-0bf4d3defcbb</guid>
-            <link>https://www.themountainmail.com/opinion/dear-editor-election-results-leave-many-questions/article_31171f21-af1b-4777-8675-0bf4d3defcbb.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>The Noteables to present ‘Carry the Light’ Dec. 11-13</title>
-            <description>The Noteables, a local women’s chorus, will present their winter concert series, “Carry the Light,” Dec.11-13 in Buena Vista and Salida.</description>
-            <pubDate>Fri, 20 Nov 2026 14:00:00 -0700</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/535840b4-9dd8-455b-867a-3f226040070a</guid>
-            <link>https://www.themountainmail.com/news/the-noteables-to-present-carry-the-light-dec-11-13/article_535840b4-9dd8-455b-867a-3f226040070a.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/a/54/a5426328-3d3a-4246-82c2-8b7fed117709/6927448ec790d.image.jpg?resize=300%2C200" length="288570" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Dear Editor: ‘The Work in Progress’</title>
-            <description>Dear Editor:</description>
-            <pubDate>Fri, 20 Nov 2026 12:00:00 -0700</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/61109627-d730-41bb-8ca9-470df382dc23</guid>
-            <link>https://www.themountainmail.com/opinion/dear-editor-the-work-in-progress/article_61109627-d730-41bb-8ca9-470df382dc23.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/3/74/37406688-69db-11ee-87be-3fef5851d183/65295ef835730.image.jpg?resize=300%2C204" length="246320" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>The U.S. Has Lost Measles Elimination Status. Here’s What That Means for Chaffee County</title>
-            <description>On Nov. 17, the Pan American Health Organization announced that the United States has lost the measles elimination status it earned in 2000. After 26 years, measles is once again able to spread continuously within the United States.</description>
-            <pubDate>Thu, 19 Nov 2026 18:05:00 -0700</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/fdc809d2-ca33-4a69-9c7a-e8e31cf809a7</guid>
-            <link>https://www.themountainmail.com/news/health_wellness/the-u-s-has-lost-measles-elimination-status-here-s-what-that-means-for-chaffee/article_fdc809d2-ca33-4a69-9c7a-e8e31cf809a7.html</link>
-            <dc:creator>By Emily Anderson, Chaffee County Public Health</dc:creator>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/0/ec/0ec35edc-eb30-11ee-94f2-a75ed38e8b4c/66025a704bce6.image.jpg?resize=300%2C160" length="101734" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Parade of Lights to showcase past and future eras</title>
-            <description>The annual Salida Parade of Lights will have floats “decked out for the decades,” Nov. 27, starting at 6 p.m. on F Street. The deadline to register a float is 4 p.m. Nov. 20.</description>
-            <pubDate>Thu, 19 Nov 2026 18:00:00 -0700</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/0c71764e-299d-4a36-b6ec-269fa8bd5219</guid>
-            <link>https://www.themountainmail.com/news/parade-of-lights-to-showcase-past-and-future-eras/article_0c71764e-299d-4a36-b6ec-269fa8bd5219.html</link>
-            <dc:creator>by Lijah Sampson, Mail Reporter</dc:creator>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/0/ce/0ce8619c-a2c9-4f76-9732-8868a8b24f43/692e17328a2b1.image.jpg?resize=300%2C200" length="202177" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Past Tense - Nov. 16-20</title>
-            <description>140 Years Ago</description>
-            <pubDate>Thu, 19 Nov 2026 13:00:00 -0700</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/45ad55a1-8b6f-47ab-8970-4013bd3071f9</guid>
-            <link>https://www.themountainmail.com/news/past-tense---nov-16-20/article_45ad55a1-8b6f-47ab-8970-4013bd3071f9.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/0/e0/0e00316c-0342-11ef-addd-1ba88a8b9461/662abcde9c586.image.jpg?resize=300%2C200" length="434511" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Obituary: Roxanne Marie Gonzales Merton</title>
-            <description>Longtime Salida resident Roxanne Marie Gonzales Merton died Nov. 6, 2026.</description>
-            <pubDate>Thu, 19 Nov 2026 12:05:00 -0700</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/95a9e5cd-2cda-4295-a24e-e535da3ac9a1</guid>
-            <link>https://www.themountainmail.com/obituaries/obituary-roxanne-marie-gonzales-merton/article_95a9e5cd-2cda-4295-a24e-e535da3ac9a1.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/4/5b/45bb9f85-0d60-411a-bf3f-a163f93c54c9/6aff46ef9f891.image.jpg?crop=954%2C716%2C11%2C281&amp;resize=300%2C225&amp;order=crop%2Cresize" length="172536" type="image/jpeg" />
-        </item>
-
-        <item>
-            <title>Menus, Nov. 19-26</title>
-            <description>Meals on Wheels/Congregate Meals: Meals on Wheels are delivered Tuesday, Thursday and Friday in Salida and Buena Vista. However, due to staffing challenges, for the immediate future menus will not be available in advance. Clients will receive a homemade meal&#8230;</description>
-            <pubDate>Thu, 19 Nov 2026 08:54:00 -0700</pubDate>
-            <guid isPermaLink="false">http://www.themountainmail.com/tncms/asset/editorial/6dbedad6-ac86-4ce7-a6db-c5eee3cc1d6f</guid>
-            <link>https://www.themountainmail.com/news/menus-nov-19-26/article_6dbedad6-ac86-4ce7-a6db-c5eee3cc1d6f.html</link>
-            <enclosure url="https://bloximages.newyork1.vip.townnews.com/themountainmail.com/content/tncms/assets/v3/editorial/9/61/9613df37-01e6-4a73-82f3-945fb000654f/6a207baa27d40.image.jpg?resize=300%2C200" length="252356" type="image/jpeg" />
         </item>
 
     </channel>
